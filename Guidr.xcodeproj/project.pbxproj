@@ -18,6 +18,10 @@
 		A3A3D1ED230E324D00AD7A99 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */; };
 		A3A3D1EF230E325800AD7A99 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1EE230E325800AD7A99 /* SignUpViewController.swift */; };
 		A3A3D1F1230E326B00AD7A99 /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1F0230E326B00AD7A99 /* HomePageTableViewController.swift */; };
+		A3A3D1F3230E3C2200AD7A99 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1F2230E3C2200AD7A99 /* Bearer.swift */; };
+		A3A3D1F5230E3C2E00AD7A99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1F4230E3C2E00AD7A99 /* User.swift */; };
+		A3A3D1F7230E3D5800AD7A99 /* Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1F6230E3D5800AD7A99 /* Guide.swift */; };
+		A3A3D1F9230E3FC900AD7A99 /* GuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1F8230E3FC900AD7A99 /* GuideController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		A3A3D1EE230E325800AD7A99 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A3A3D1F0230E326B00AD7A99 /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
+		A3A3D1F2230E3C2200AD7A99 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		A3A3D1F4230E3C2E00AD7A99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A3A3D1F6230E3D5800AD7A99 /* Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide.swift; sourceTree = "<group>"; };
+		A3A3D1F8230E3FC900AD7A99 /* GuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				A3A3D1E2230E28A100AD7A99 /* Models */,
-				A3A3D1E3230E28B000AD7A99 /* Networking */,
+				A3A3D1E3230E28B000AD7A99 /* NetworkController */,
 				A3A3D1E1230E289600AD7A99 /* Storyboards */,
 				A3A3D1DF230E285200AD7A99 /* View Controllers */,
 				A3A3D1E0230E285F00AD7A99 /* Resources */,
@@ -111,15 +119,19 @@
 		A3A3D1E2230E28A100AD7A99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A3A3D1F6230E3D5800AD7A99 /* Guide.swift */,
+				A3A3D1F4230E3C2E00AD7A99 /* User.swift */,
+				A3A3D1F2230E3C2200AD7A99 /* Bearer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A3A3D1E3230E28B000AD7A99 /* Networking */ = {
+		A3A3D1E3230E28B000AD7A99 /* NetworkController */ = {
 			isa = PBXGroup;
 			children = (
+				A3A3D1F8230E3FC900AD7A99 /* GuideController.swift */,
 			);
-			path = Networking;
+			path = NetworkController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +210,13 @@
 			files = (
 				A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */,
 				A3A3D1F1230E326B00AD7A99 /* HomePageTableViewController.swift in Sources */,
+				A3A3D1F3230E3C2200AD7A99 /* Bearer.swift in Sources */,
 				A3A3D1EB230E324000AD7A99 /* LandingPageViewController.swift in Sources */,
+				A3A3D1F7230E3D5800AD7A99 /* Guide.swift in Sources */,
 				A3A3D1EF230E325800AD7A99 /* SignUpViewController.swift in Sources */,
 				A3A3D1ED230E324D00AD7A99 /* LogInViewController.swift in Sources */,
+				A3A3D1F9230E3FC900AD7A99 /* GuideController.swift in Sources */,
+				A3A3D1F5230E3C2E00AD7A99 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
