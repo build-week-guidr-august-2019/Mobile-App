@@ -36,7 +36,7 @@ class GuideController {
         
         var request = URLRequest(url: signUpURL)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let jsonEnconder = JSONEncoder()
         do {
@@ -61,9 +61,49 @@ class GuideController {
         } .resume()
     }
     
-    // sign in
+    // log in
     
-    func signIn(with user: User, completion: @escaping (Error?) -> ()) {
-        let signInURL = baseURL.appendingPathComponent("<#T##pathComponent: String##String#>")
+    func logIn(with user: User, completion: @escaping (Error?) -> ()) {
+        let logInURL = baseURL.appendingPathComponent("auth/login")
+        var request = URLRequest(url: logInURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(user)
+            request.httpBody = jsonData
+        } catch {
+            NSLog("Error encoding user object: \(error)")
+            completion(error)
+        }
+        
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                return
+            }
+            if let error = error {
+                completion(error)
+                return
+            }
+            guard let data = data else {
+                completion(NSError())
+                return
+            }
+            let decoder = JSONDecoder()
+            
+            do {
+                self.bearer = try decoder.decode(Bearer.self, from: data)
+            } catch {
+                NSLog("error decoding bearer object: \(error)")
+                completion(error)
+                return
+                
+            }
+            completion(nil)
+        } .resume()
+ 
     }
 }
