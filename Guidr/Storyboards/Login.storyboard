@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Guide!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMz-eE-fu8">
-                                <rect key="frame" x="117.66666666666669" y="94" width="179" height="40.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Guide!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMz-eE-fu8">
+                                <rect key="frame" x="97" y="94" width="220" height="50.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sql-bN-aH7">
-                                <rect key="frame" x="20" y="174.66666666666663" width="374" height="186"/>
+                                <rect key="frame" x="20" y="184.33333333333337" width="374" height="186"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gem-tY-hV4">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="84"/>
@@ -52,7 +52,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TVU-cA-PJd">
-                                        <rect key="frame" x="0.0" y="104.00000000000003" width="374" height="82"/>
+                                        <rect key="frame" x="0.0" y="103.99999999999997" width="374" height="82"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkj-dX-SBF">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
@@ -75,7 +75,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TM7-hF-29U">
-                                <rect key="frame" x="20" y="380.66666666666669" width="374" height="80"/>
+                                <rect key="frame" x="20" y="390.33333333333331" width="374" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJz-m1-jdf">
                                         <rect key="frame" x="40" y="0.0" width="294" height="50"/>
@@ -108,14 +108,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XMz-eE-fu8" firstAttribute="centerX" secondItem="y88-qZ-U0J" secondAttribute="centerX" id="Gy2-Uw-ETi"/>
                             <constraint firstItem="Sql-bN-aH7" firstAttribute="leading" secondItem="y88-qZ-U0J" secondAttribute="leading" constant="20" id="LTC-ro-C8s"/>
                             <constraint firstItem="TM7-hF-29U" firstAttribute="leading" secondItem="y88-qZ-U0J" secondAttribute="leading" constant="20" id="LgG-yt-eII"/>
                             <constraint firstItem="XMz-eE-fu8" firstAttribute="top" secondItem="y88-qZ-U0J" secondAttribute="top" constant="50" id="M89-n3-0sD"/>
                             <constraint firstItem="TM7-hF-29U" firstAttribute="top" secondItem="Sql-bN-aH7" secondAttribute="bottom" constant="20" id="OLW-w0-J4q"/>
                             <constraint firstItem="y88-qZ-U0J" firstAttribute="trailing" secondItem="TM7-hF-29U" secondAttribute="trailing" constant="20" id="e0g-oe-s5L"/>
                             <constraint firstItem="y88-qZ-U0J" firstAttribute="trailing" secondItem="Sql-bN-aH7" secondAttribute="trailing" constant="20" id="eQE-dg-7HJ"/>
-                            <constraint firstItem="XMz-eE-fu8" firstAttribute="leading" secondItem="y88-qZ-U0J" secondAttribute="leading" constant="117.66666666666669" id="jzO-FU-iPC"/>
-                            <constraint firstItem="y88-qZ-U0J" firstAttribute="trailing" secondItem="XMz-eE-fu8" secondAttribute="trailing" constant="117.33333333333331" id="oPT-cD-baT"/>
                             <constraint firstItem="Sql-bN-aH7" firstAttribute="top" secondItem="XMz-eE-fu8" secondAttribute="bottom" constant="40" id="xC8-EH-wbq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y88-qZ-U0J"/>
