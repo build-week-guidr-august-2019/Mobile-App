@@ -63,7 +63,7 @@ class GuideController {
     
     // log in
     
-    func logIn(with user: User, completion: @escaping (Error?) -> ()) {
+    func logIn(with user: User, completion: @escaping (NetworkError?) -> ()) {
         let logInURL = baseURL.appendingPathComponent("auth/login")
         var request = URLRequest(url: logInURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -75,21 +75,22 @@ class GuideController {
             request.httpBody = jsonData
         } catch {
             NSLog("Error encoding user object: \(error)")
-            completion(error)
+            completion(.noAuth)
         }
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+//                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                completion(.badAuth)
                 return
             }
             if let error = error {
-                completion(error)
+                completion(.otherError)
                 return
             }
             guard let data = data else {
-                completion(NSError())
+                completion(.badData)
                 return
             }
             let decoder = JSONDecoder()
@@ -98,7 +99,7 @@ class GuideController {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
             } catch {
                 NSLog("error decoding bearer object: \(error)")
-                completion(error)
+                completion(.noDecode)
                 return
                 
             }
