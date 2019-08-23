@@ -85,7 +85,7 @@ class GuideController {
                 completion(.badAuth)
                 return
             }
-            if let error = error {
+            if let _ = error {
                 completion(.otherError)
                 return
             }

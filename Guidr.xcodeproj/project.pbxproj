@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3899397230F988700A1FCE9 /* LandingPageNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3899396230F988700A1FCE9 /* LandingPageNavViewController.swift */; };
 		A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */; };
 		A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1CF230E277B00AD7A99 /* LandingPage.storyboard */; };
 		A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A3899396230F988700A1FCE9 /* LandingPageNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingPageNavViewController.swift; path = "Guidr/View Controllers/LandingPageNavViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A3A3D1C8230E277B00AD7A99 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A3D1D0230E277B00AD7A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandingPage.storyboard; sourceTree = "<group>"; };
@@ -86,9 +88,10 @@
 		A3A3D1DF230E285200AD7A99 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A3899396230F988700A1FCE9 /* LandingPageNavViewController.swift */,
 				A3A3D1EA230E324000AD7A99 /* LandingPageViewController.swift */,
-				A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */,
 				A3A3D1EE230E325800AD7A99 /* SignUpViewController.swift */,
+				A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */,
 				A3A3D1F0230E326B00AD7A99 /* HomePageTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -215,6 +218,7 @@
 				A3A3D1F7230E3D5800AD7A99 /* Guide.swift in Sources */,
 				A3A3D1EF230E325800AD7A99 /* SignUpViewController.swift in Sources */,
 				A3A3D1ED230E324D00AD7A99 /* LogInViewController.swift in Sources */,
+				A3899397230F988700A1FCE9 /* LandingPageNavViewController.swift in Sources */,
 				A3A3D1F9230E3FC900AD7A99 /* GuideController.swift in Sources */,
 				A3A3D1F5230E3C2E00AD7A99 /* User.swift in Sources */,
 			);

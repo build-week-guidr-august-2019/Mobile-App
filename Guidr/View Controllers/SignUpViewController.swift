@@ -12,7 +12,7 @@ class SignUpViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    var guideController: GuideController!
+    var guideController: GuideController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,32 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        guard let guideController = self.guideController else {return}
+        
+        if let username = self.emailTextField.text,
+        !username.isEmpty,
+            let password = self.passwordTextField.text, !password.isEmpty {
+            let user = User(username: username, password: password)
+            
+            guideController.signUp(with: user) { (error) in
+                if let error = error {
+                    NSLog("Error occured during sign up: \(error)")
+                } else {
+                    DispatchQueue.main.async {
+                        let alertController = UIAlertController(title: "Sign Up Successful", message: "Now please log in", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alertController.addAction(alertAction)
+                        self.present(alertController, animated: true, completion: {
+                            self.navigationController?.popViewController(animated: true)
+                    })
+                }
+             }
+          }
+       }
     }
     
     @IBAction func toLoginButtonPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation

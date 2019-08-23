@@ -10,6 +10,7 @@ import UIKit
 
 class HomePageTableViewController: UITableViewController {
 
+    let guideController = GuideController()
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -82,14 +83,19 @@ class HomePageTableViewController: UITableViewController {
     }
     */
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ToLanding" {
+            guard let landingVC = segue.destination as? LandingPageNavViewController else {return}
+            landingVC.guideController = guideController
+        }
     }
-    */
+     
+  
 
 }
