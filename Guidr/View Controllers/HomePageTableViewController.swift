@@ -10,9 +10,7 @@ import UIKit
 
 class HomePageTableViewController: UITableViewController {
 
-    @IBOutlet weak var shortDescriptionTextView: UITextView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+   
     
     
     override func viewDidLoad() {
@@ -42,9 +40,9 @@ class HomePageTableViewController: UITableViewController {
         return 0
     }
 
-    @IBAction func addTripButtonPressed(_ sender: Any) {
-        
+    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
     }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
