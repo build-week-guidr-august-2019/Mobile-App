@@ -9,8 +9,8 @@
 import Foundation
 
 struct User: Codable {
-    
-    init(username: String, password: String, user_id: Int? = nil) {
+//    , id: Int? = nil
+    init(username: String, password: String) {
         self.username = username
         self.password = password 
     }
