@@ -10,6 +10,9 @@ import UIKit
 
 class HomePageTableViewController: UITableViewController {
 
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -37,6 +40,9 @@ class HomePageTableViewController: UITableViewController {
         return 0
     }
 
+    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
