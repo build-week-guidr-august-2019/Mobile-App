@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		953F8372230F824F0081F527 /* Rokkitt in Resources */ = {isa = PBXBuildFile; fileRef = 953F8371230F824F0081F527 /* Rokkitt */; };
-		95494CEC230F4F4B0037978A /* rubik in Resources */ = {isa = PBXBuildFile; fileRef = 95494CEB230F4F4B0037978A /* rubik */; };
 		A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */; };
 		A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1CF230E277B00AD7A99 /* LandingPage.storyboard */; };
 		A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		953F8371230F824F0081F527 /* Rokkitt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Rokkitt; path = ../../../../../Documents/ZIPS/Rokkitt; sourceTree = "<group>"; };
-		95494CEB230F4F4B0037978A /* rubik */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rubik; path = ../../../../../Documents/ZIPS/rubik; sourceTree = "<group>"; };
 		A3A3D1C8230E277B00AD7A99 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A3D1D0230E277B00AD7A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandingPage.storyboard; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				953F8371230F824F0081F527 /* Rokkitt */,
-				95494CEB230F4F4B0037978A /* rubik */,
 				A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */,
 				A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */,
 				A3A3D1D4230E277D00AD7A99 /* LaunchScreen.storyboard */,
@@ -198,7 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95494CEC230F4F4B0037978A /* rubik in Resources */,
 				A3A3D1E5230E2B8C00AD7A99 /* Login.storyboard in Resources */,
 				A3A3D1D6230E277D00AD7A99 /* LaunchScreen.storyboard in Resources */,
 				A3A3D1E9230E312100AD7A99 /* HomePage.storyboard in Resources */,
