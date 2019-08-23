@@ -10,7 +10,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     
@@ -31,7 +31,10 @@ class LogInViewController: UIViewController {
     }
     */
     
-    @IBAction func logInButtonPressed(_ sender: UIButton) {
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
     }
     
 
