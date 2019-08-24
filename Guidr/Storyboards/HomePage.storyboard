@@ -70,9 +70,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="shortDescriptionTextView" destination="Oya-uo-ByY" id="cGe-NC-GrN"/>
-                                    <outlet property="titleLabel" destination="3z4-5n-UMf" id="juw-JF-P1e"/>
-                                    <outlet property="tripImage" destination="mqy-ld-cON" id="JmC-Zp-dHG"/>
+                                    <segue destination="CEl-oy-w7J" kind="show" identifier="ShowPortfolioSegue" id="c09-CD-OTD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,6 +83,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ii8-PP-aSz">
                             <connections>
                                 <action selector="addTripButtonPressed:" destination="tRL-8W-gId" id="eTT-Q2-liA"/>
+                                <segue destination="yXQ-ck-GUe" kind="show" identifier="ShowCreateTripSegue" id="Qw3-bC-ip5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -103,6 +102,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipP-bJ-XVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1540" y="68"/>
+        </scene>
+        <!--CreateTrip-->
+        <scene sceneID="4mO-7U-im2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTrip" id="yXQ-ck-GUe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybn-7r-nvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="-160"/>
+        </scene>
+        <!--PortfolioView-->
+        <scene sceneID="tmk-l8-CiP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PortfolioView" id="CEl-oy-w7J" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFi-an-5Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="-89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xu7-iT-teQ">
