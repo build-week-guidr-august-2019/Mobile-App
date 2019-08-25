@@ -26,5 +26,11 @@ class LandingPageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func logInButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+    }
+    
 }
