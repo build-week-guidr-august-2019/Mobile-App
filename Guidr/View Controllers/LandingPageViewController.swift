@@ -12,7 +12,6 @@ class LandingPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "landingPageImage")!)
         assignbackground()
     }
     
@@ -27,7 +26,7 @@ class LandingPageViewController: UIViewController {
     }
     */
     
-    func assignbackground(){
+    func assignbackground() {
         let background = UIImage(named: "landingPageImage")
         
         var imageView : UIImageView!
