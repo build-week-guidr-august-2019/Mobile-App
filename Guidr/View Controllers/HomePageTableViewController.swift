@@ -19,7 +19,7 @@ class HomePageTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -92,7 +92,11 @@ class HomePageTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowPortfolioViewSegue" {
-            if let portfolioVC = segue.destination as? PortfolioViewController {
+            
+            if let portfolioVC = segue.destination as? PortfolioViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+                
+                portfolioVC.trip = tripController.trips[indexPath.row]
                 
             }
         } else if segue.identifier == "ShowCreateTripSegue" {

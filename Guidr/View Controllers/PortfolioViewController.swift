@@ -19,6 +19,8 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var guideAgeTextField: UITextField!
     @IBOutlet weak var experienceTextField: UITextField!
     
+    var trip: Trip?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,7 +43,7 @@ class PortfolioViewController: UIViewController {
         alertController.addAction(cancelAction)
 
         present(alertController, animated: true, completion: nil)
-}
+    }
     
     func deleteTrip() {
         

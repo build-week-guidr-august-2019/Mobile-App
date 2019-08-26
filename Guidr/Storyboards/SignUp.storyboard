@@ -119,6 +119,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="toLoginButtonPressed:" destination="fM8-4z-gpJ" eventType="touchUpInside" id="oCi-bX-7Zw"/>
+                                                    <segue destination="Pm4-IT-FlU" kind="presentation" identifier="LogInModalSegue" id="wGe-Fz-FZH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -155,6 +156,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXk-En-Ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-81" y="168"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Aqm-Hz-fN4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="Pm4-IT-FlU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVy-ML-rdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="168"/>
         </scene>
     </scenes>
 </document>
