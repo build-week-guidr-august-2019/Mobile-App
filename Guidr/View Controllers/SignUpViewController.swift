@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         guard let guideController = self.guideController else {return}
         
-        if let username = self.emailTextField.text,
+        if let username = self.usernameTextField.text,
         !username.isEmpty,
             let password = self.passwordTextField.text, !password.isEmpty {
             let user = User(username: username, password: password)
