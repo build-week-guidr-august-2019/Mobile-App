@@ -21,11 +21,13 @@ class PortfolioViewController: UIViewController {
     
     //var tripController: TripController?
     var trip: Trip?
+    var guide: Guide?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
+
     }
     
 
@@ -51,13 +53,23 @@ class PortfolioViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditTripModalSegue" {
             if let editTripVC = segue.destination as? EditTripViewController {
-                editTripVC.trip = trip
+                //editTripVC.trip = trip
             }
         }
     }
     
-    func deleteTrip() {
+    func updateViews() {
         
+        // Need unwrapping for each item
+        
+        //tripImageView.image = UIImage(trip?.image)
+        descriptionTextField.text = trip?.shortDescription
+        dateTextField.text = "Date of Trip: \(String(describing: trip?.date))" // need formatting for the date
+        durationTextField.text = "Duration of Trip: \(String(describing: trip?.duration)) day(s)"
+        difficultyTextField.text = "Level of Difficulty: \(String(describing: trip?.type))"
+        guideAgeTextField.text = "Guide Age: \(String(describing: guide?.age))"
+        experienceTextField.text = "Years of Experience: \(String(describing: guide?.yearsAsGuide))"
+
     }
     /*
     // MARK: - Navigation
