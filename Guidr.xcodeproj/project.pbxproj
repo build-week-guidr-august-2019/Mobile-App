@@ -122,9 +122,10 @@
 		A3A3D1DF230E285200AD7A99 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A3899396230F988700A1FCE9 /* LandingPageNavViewController.swift */,
 				A3A3D1EA230E324000AD7A99 /* LandingPageViewController.swift */,
-				A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */,
 				A3A3D1EE230E325800AD7A99 /* SignUpViewController.swift */,
+				A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */,
 				A3A3D1F0230E326B00AD7A99 /* HomePageTableViewController.swift */,
 				95D89CCA2311AD2300555FE8 /* PortfolioViewController.swift */,
 				95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */,
@@ -264,6 +265,7 @@
 				A3A3D1F7230E3D5800AD7A99 /* Guide.swift in Sources */,
 				A3A3D1EF230E325800AD7A99 /* SignUpViewController.swift in Sources */,
 				A3A3D1ED230E324D00AD7A99 /* LogInViewController.swift in Sources */,
+				A3899397230F988700A1FCE9 /* LandingPageNavViewController.swift in Sources */,
 				A3A3D1F9230E3FC900AD7A99 /* GuideController.swift in Sources */,
 				95D89CCB2311AD2300555FE8 /* PortfolioViewController.swift in Sources */,
 				A3A3D1F5230E3C2E00AD7A99 /* User.swift in Sources */,
