@@ -36,7 +36,8 @@ class PortfolioViewController: UIViewController {
         let alertController = UIAlertController(title: "More Options...", message: nil, preferredStyle: .alert)
         
         // Creates Options (actions) that will be shown in the alert
-        let editAction = UIAlertAction(title: "Edit", style: .default, handler: { action in self.performSegue(withIdentifier: "EditTripModalSegue", sender: self) })
+        let editAction = UIAlertAction(title: "Edit", style: .default,
+                        handler: { action in self.performSegue(withIdentifier: "EditTripModalSegue", sender: self) })
         
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
         

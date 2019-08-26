@@ -15,11 +15,6 @@ class HomePageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,16 +91,16 @@ class HomePageTableViewController: UITableViewController {
             if let portfolioVC = segue.destination as? PortfolioViewController,
             let indexPath = tableView.indexPathForSelectedRow {
                 
-                portfolioVC.tripController = tripController
                 portfolioVC.trip = tripController.trips[indexPath.row]
                 
                 
             }
-        } else if segue.identifier == "ShowCreateTripSegue" {
-            if let createTripVC = segue.destination as? CreateTripViewController {
-                
-            }
         }
+//        else if segue.identifier == "ShowCreateTripSegue" {
+//            if let createTripVC = segue.destination as? CreateTripViewController {
+//
+//            }
+//        }
     }
 
 
