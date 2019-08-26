@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rokkitt-Regular.ttf">
+            <string>Rokkitt-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Portfolio View Controller-->
         <scene sceneID="iBB-Be-yUc">
@@ -17,13 +22,136 @@
                     <view key="view" contentMode="scaleToFill" id="YI1-GG-N0z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZWc-qj-Z85">
+                                <rect key="frame" x="117" y="120" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZWc-qj-Z85" secondAttribute="height" multiplier="1:1" id="Uaw-Nn-bxW"/>
+                                    <constraint firstAttribute="width" constant="180" id="sY3-1t-WpY"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-Is-KN8">
+                                <rect key="frame" x="0.0" y="36" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="xxs-On-UO8">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="xfT-h6-jvO"/>
+                                        <barButtonItem key="rightBarButtonItem" title="•••" id="eHF-fC-fWU">
+                                            <connections>
+                                                <action selector="moreOptionsPressed:" destination="2Dc-um-RLQ" id="0LS-vD-aMw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J41-NS-tQb">
+                                <rect key="frame" x="0.0" y="826" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="M74-Pc-0mI"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Intermediate Level tour..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6CY-rf-0uX">
+                                <rect key="frame" x="40" y="320" width="334" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LCI-2K-IsZ"/>
+                                </constraints>
+                                <color key="textColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wA7-Hb-H4S" userLabel="AboutTripStackView">
+                                <rect key="frame" x="80" y="432" width="254" height="114"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&gt; Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-hQ-Sl1">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&gt; Duration" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-eU-Fs0">
+                                        <rect key="frame" x="0.0" y="42" width="254" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&gt; Difficulty" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQa-Je-13A">
+                                        <rect key="frame" x="0.0" y="84" width="254" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TQa-Je-13A" secondAttribute="trailing" id="DWD-xK-dJg"/>
+                                    <constraint firstItem="TQa-Je-13A" firstAttribute="leading" secondItem="wA7-Hb-H4S" secondAttribute="leading" id="HDK-OY-KnP"/>
+                                    <constraint firstItem="mdc-eU-Fs0" firstAttribute="leading" secondItem="wA7-Hb-H4S" secondAttribute="leading" id="YjR-1r-72i"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Sg-hQ-Sl1" secondAttribute="trailing" id="fgM-vW-Kdn"/>
+                                    <constraint firstItem="4Sg-hQ-Sl1" firstAttribute="leading" secondItem="wA7-Hb-H4S" secondAttribute="leading" id="o4b-Gs-HMA"/>
+                                    <constraint firstAttribute="trailing" secondItem="mdc-eU-Fs0" secondAttribute="trailing" id="rWB-dU-Fi4"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ouT-L7-avL" userLabel="AboutGuideStackView">
+                                <rect key="frame" x="40" y="570" width="334" height="68"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guide Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPf-wF-KeZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Years of Experience" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-4P-gAU">
+                                        <rect key="frame" x="0.0" y="38" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pSH-4P-gAU" secondAttribute="trailing" id="86x-Sg-FNc"/>
+                                    <constraint firstItem="pSH-4P-gAU" firstAttribute="leading" secondItem="ouT-L7-avL" secondAttribute="leading" id="9i0-pe-04y"/>
+                                    <constraint firstItem="DPf-wF-KeZ" firstAttribute="leading" secondItem="ouT-L7-avL" secondAttribute="leading" id="PS9-he-p2R"/>
+                                    <constraint firstAttribute="trailing" secondItem="DPf-wF-KeZ" secondAttribute="trailing" id="hc9-K4-ZKT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IGd-Is-KN8" firstAttribute="leading" secondItem="J41-NS-tQb" secondAttribute="leading" id="0mV-QC-GSd"/>
+                            <constraint firstItem="wA7-Hb-H4S" firstAttribute="top" secondItem="6CY-rf-0uX" secondAttribute="bottom" constant="32" id="48k-82-7Ok"/>
+                            <constraint firstItem="IGd-Is-KN8" firstAttribute="top" secondItem="YI1-GG-N0z" secondAttribute="topMargin" constant="-8" id="5Uw-ik-X4f"/>
+                            <constraint firstItem="qN1-Y5-lmA" firstAttribute="trailing" secondItem="ouT-L7-avL" secondAttribute="trailing" constant="40" id="7sj-pk-8sF"/>
+                            <constraint firstItem="IGd-Is-KN8" firstAttribute="leading" secondItem="YI1-GG-N0z" secondAttribute="leading" id="9qi-HA-cMX"/>
+                            <constraint firstItem="ouT-L7-avL" firstAttribute="leading" secondItem="6CY-rf-0uX" secondAttribute="leading" id="Po4-VI-wWt"/>
+                            <constraint firstItem="ouT-L7-avL" firstAttribute="top" secondItem="wA7-Hb-H4S" secondAttribute="bottom" constant="24" id="SVq-bS-BNr"/>
+                            <constraint firstItem="ZWc-qj-Z85" firstAttribute="centerX" secondItem="YI1-GG-N0z" secondAttribute="centerX" id="UyW-0y-lnr"/>
+                            <constraint firstItem="ZWc-qj-Z85" firstAttribute="centerX" secondItem="IGd-Is-KN8" secondAttribute="centerX" id="ZAE-va-aMV"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="J41-NS-tQb" secondAttribute="bottom" constant="-8" id="aLK-xp-dWF"/>
+                            <constraint firstItem="J41-NS-tQb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ouT-L7-avL" secondAttribute="bottom" constant="40" id="bUO-25-hgO"/>
+                            <constraint firstItem="IGd-Is-KN8" firstAttribute="trailing" secondItem="J41-NS-tQb" secondAttribute="trailing" id="cmJ-S1-ywm"/>
+                            <constraint firstItem="qN1-Y5-lmA" firstAttribute="trailing" secondItem="wA7-Hb-H4S" secondAttribute="trailing" constant="80" id="gm9-BS-91k"/>
+                            <constraint firstItem="6CY-rf-0uX" firstAttribute="top" secondItem="ZWc-qj-Z85" secondAttribute="bottom" constant="20" id="gsC-24-nn7"/>
+                            <constraint firstItem="wA7-Hb-H4S" firstAttribute="centerX" secondItem="YI1-GG-N0z" secondAttribute="centerX" id="gzA-Eb-4YI"/>
+                            <constraint firstItem="6CY-rf-0uX" firstAttribute="leading" secondItem="qN1-Y5-lmA" secondAttribute="leading" constant="40" id="hJO-mA-xoP"/>
+                            <constraint firstItem="wA7-Hb-H4S" firstAttribute="leading" secondItem="qN1-Y5-lmA" secondAttribute="leading" constant="80" id="huB-90-UOi"/>
+                            <constraint firstItem="qN1-Y5-lmA" firstAttribute="trailing" secondItem="6CY-rf-0uX" secondAttribute="trailing" constant="40" id="os8-ju-ebu"/>
+                            <constraint firstItem="ZWc-qj-Z85" firstAttribute="top" secondItem="IGd-Is-KN8" secondAttribute="bottom" constant="40" id="rgW-Zu-PE9"/>
+                            <constraint firstItem="6CY-rf-0uX" firstAttribute="centerX" secondItem="YI1-GG-N0z" secondAttribute="centerX" id="wP5-Cz-YSe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qN1-Y5-lmA"/>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="4Sg-hQ-Sl1" id="Iwu-nY-sTo"/>
+                        <outlet property="descriptionTextField" destination="6CY-rf-0uX" id="01G-KV-ekA"/>
+                        <outlet property="difficultyTextField" destination="TQa-Je-13A" id="2yD-ti-kWQ"/>
+                        <outlet property="durationTextField" destination="mdc-eU-Fs0" id="hGP-KH-u00"/>
+                        <outlet property="experienceTextField" destination="pSH-4P-gAU" id="Phh-pD-iCS"/>
+                        <outlet property="guideAgeTextField" destination="DPf-wF-KeZ" id="gkt-wM-B1c"/>
+                        <outlet property="tripImageView" destination="ZWc-qj-Z85" id="ucb-0X-02C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sT-qY-2cT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="121"/>
+            <point key="canvasLocation" x="105.79710144927537" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>
