@@ -96,7 +96,9 @@ class HomePageTableViewController: UITableViewController {
             if let portfolioVC = segue.destination as? PortfolioViewController,
             let indexPath = tableView.indexPathForSelectedRow {
                 
+                portfolioVC.tripController = tripController
                 portfolioVC.trip = tripController.trips[indexPath.row]
+                
                 
             }
         } else if segue.identifier == "ShowCreateTripSegue" {
