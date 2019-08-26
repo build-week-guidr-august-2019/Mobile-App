@@ -50,7 +50,7 @@ class GuideController {
         URLSession.shared.dataTask(with: request) { _, response, error in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 201 {
-                //or 200? 
+                //or 200?
                 completion(NSError(domain:"", code: response.statusCode, userInfo: nil))
                 return
             }

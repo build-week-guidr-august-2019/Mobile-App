@@ -34,11 +34,12 @@ class SignUpViewController: UIViewController {
                 } else {
                     DispatchQueue.main.async {
                         let alertController = UIAlertController(title: "Sign Up Successful", message: "Now please log in", preferredStyle: .alert)
-                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                        alertController.addAction(alertAction)
-                        self.present(alertController, animated: true, completion: {
+                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (_) in
                             self.navigationController?.popViewController(animated: true)
-                    })
+                        })
+                        
+                        alertController.addAction(alertAction)
+                        self.present(alertController, animated: true)
                 }
              }
           }
