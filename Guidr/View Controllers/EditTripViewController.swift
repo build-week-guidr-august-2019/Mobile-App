@@ -1,19 +1,15 @@
 //
-//  LogInViewController.swift
+//  EditTripViewController.swift
 //  Guidr
 //
-//  Created by Stephanie Bowles on 8/22/19.
+//  Created by Jessie Ann Griffin on 8/24/19.
 //  Copyright © 2019 Stephanie Bowles. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
-    
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    
+class EditTripViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,12 +26,5 @@ class LogInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
-    }
-    
 
 }

@@ -1,30 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zMQ-UV-U15">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zMQ-UV-U15">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rokkitt-Medium.ttf">
+            <string>Rokkitt-Medium</string>
+        </array>
+        <array key="Rokkitt-Regular.ttf">
+            <string>Rokkitt-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Home Page Table View Controller-->
+        <!--Home-->
         <scene sceneID="0IL-5l-OL9">
             <objects>
                 <tableViewController id="tRL-8W-gId" customClass="HomePageTableViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pLz-x1-1JV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tfc-cY-jhy">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TripCell" rowHeight="120" id="tfc-cY-jhy" customClass="TripTableViewCell" customModule="Guidr" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tfc-cY-jhy" id="Fxv-nZ-q7o">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="119.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beartrack Fork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3z4-5n-UMf">
+                                            <rect key="frame" x="127.66666666666666" y="20" width="94.666666666666657" height="17.333333333333329"/>
+                                            <fontDescription key="fontDescription" name="Rokkitt-Medium" family="Rokkitt" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mqy-ld-cON">
+                                            <rect key="frame" x="8" y="8" width="111.66666666666667" height="111.66666666666667"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="2F3-t8-VV9"/>
+                                                <constraint firstAttribute="width" secondItem="mqy-ld-cON" secondAttribute="height" multiplier="1:1" id="ADX-BS-xuS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Intermediate Level tour, starting in Little Cottonwood Canyon, followed by skiing down into Big Cottonwood." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oya-uo-ByY">
+                                            <rect key="frame" x="127.66666666666667" y="49.333333333333343" width="201.33333333333331" height="72"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="72" id="3Bv-kz-d5A"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Oya-uo-ByY" secondAttribute="trailing" constant="12" id="6yh-JN-LJF"/>
+                                        <constraint firstItem="Oya-uo-ByY" firstAttribute="top" secondItem="3z4-5n-UMf" secondAttribute="bottom" constant="12" id="FgR-c2-z4n"/>
+                                        <constraint firstItem="Oya-uo-ByY" firstAttribute="leading" secondItem="3z4-5n-UMf" secondAttribute="leading" id="Qqk-n6-peK"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3z4-5n-UMf" secondAttribute="trailing" constant="8" id="bNP-AU-Jnr"/>
+                                        <constraint firstItem="3z4-5n-UMf" firstAttribute="leading" secondItem="mqy-ld-cON" secondAttribute="trailing" constant="8" id="gaw-MS-k27"/>
+                                        <constraint firstItem="3z4-5n-UMf" firstAttribute="top" secondItem="mqy-ld-cON" secondAttribute="top" constant="12" id="isO-8r-Wys"/>
+                                        <constraint firstAttribute="bottom" secondItem="mqy-ld-cON" secondAttribute="bottom" constant="8" id="sg9-n8-far"/>
+                                        <constraint firstItem="mqy-ld-cON" firstAttribute="top" secondItem="Fxv-nZ-q7o" secondAttribute="top" constant="8" id="uoc-L2-bS4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Oya-uo-ByY" secondAttribute="bottom" constant="6.3333333333333286" id="wq2-mv-NTo"/>
+                                        <constraint firstItem="mqy-ld-cON" firstAttribute="leading" secondItem="Fxv-nZ-q7o" secondAttribute="leading" constant="8" id="y1K-w7-OuZ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CEl-oy-w7J" kind="show" identifier="ShowPortfolioSegue" id="c09-CD-OTD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,14 +79,21 @@
                             <outlet property="delegate" destination="tRL-8W-gId" id="KMy-d8-VHg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dt1-2I-Xi1"/>
+                    <navigationItem key="navigationItem" title="Home" id="dt1-2I-Xi1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ii8-PP-aSz">
+                            <connections>
+                                <action selector="addTripButtonPressed:" destination="tRL-8W-gId" id="eTT-Q2-liA"/>
+                                <segue destination="yXQ-ck-GUe" kind="show" identifier="ShowCreateTripSegue" id="Qw3-bC-ip5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="JXu-z9-yJc" kind="presentation" identifier="ToLanding" id="O8n-ys-z79"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KG-g1-OEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112.8" y="68.815592203898049"/>
+            <point key="canvasLocation" x="974" y="68"/>
         </scene>
         <!--LandingPage-->
         <scene sceneID="5iW-cD-b9t">
@@ -47,7 +101,23 @@
                 <viewControllerPlaceholder storyboardName="LandingPage" id="JXu-z9-yJc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipP-bJ-XVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="31"/>
+            <point key="canvasLocation" x="1540" y="68"/>
+        </scene>
+        <!--CreateTrip-->
+        <scene sceneID="4mO-7U-im2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTrip" id="yXQ-ck-GUe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybn-7r-nvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="-160"/>
+        </scene>
+        <!--PortfolioView-->
+        <scene sceneID="tmk-l8-CiP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PortfolioView" id="CEl-oy-w7J" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFi-an-5Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="-89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xu7-iT-teQ">
@@ -55,7 +125,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zMQ-UV-U15" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bH5-fv-8nd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

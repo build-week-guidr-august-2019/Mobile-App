@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3899397230F988700A1FCE9 /* LandingPageNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3899396230F988700A1FCE9 /* LandingPageNavViewController.swift */; };
+		953F8372230F824F0081F527 /* Rokkitt in Resources */ = {isa = PBXBuildFile; fileRef = 953F8371230F824F0081F527 /* Rokkitt */; };
+		953F8376230F94B00081F527 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F8375230F94B00081F527 /* TripTableViewCell.swift */; };
+		95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */; };
+		95D89CC72311ACB500555FE8 /* CreateTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */; };
+		95D89CC92311ACCE00555FE8 /* EditTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC82311ACCE00555FE8 /* EditTrip.storyboard */; };
+		95D89CCB2311AD2300555FE8 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CCA2311AD2300555FE8 /* PortfolioViewController.swift */; };
+		95D89CCD2311AD3400555FE8 /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */; };
+		95D89CCF2311AD4100555FE8 /* EditTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */; };
+		95D89CD22311BAF500555FE8 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CD12311BAF500555FE8 /* TripController.swift */; };
 		A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */; };
 		A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1CF230E277B00AD7A99 /* LandingPage.storyboard */; };
 		A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */; };
@@ -26,7 +34,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A3899396230F988700A1FCE9 /* LandingPageNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingPageNavViewController.swift; path = "Guidr/View Controllers/LandingPageNavViewController.swift"; sourceTree = SOURCE_ROOT; };
+		953F8371230F824F0081F527 /* Rokkitt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Rokkitt; path = ../../../../../Documents/ZIPS/Rokkitt; sourceTree = "<group>"; };
+		953F8375230F94B00081F527 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioView.storyboard; sourceTree = "<group>"; };
+		95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTrip.storyboard; sourceTree = "<group>"; };
+		95D89CC82311ACCE00555FE8 /* EditTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTrip.storyboard; sourceTree = "<group>"; };
+		95D89CCA2311AD2300555FE8 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
+		95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripViewController.swift; sourceTree = "<group>"; };
+		95D89CD12311BAF500555FE8 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
 		A3A3D1C8230E277B00AD7A99 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A3D1D0230E277B00AD7A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandingPage.storyboard; sourceTree = "<group>"; };
@@ -57,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953F8374230F94820081F527 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				953F8375230F94B00081F527 /* TripTableViewCell.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		95D89CD02311BA8800555FE8 /* Model Conrollers */ = {
+			isa = PBXGroup;
+			children = (
+				95D89CD12311BAF500555FE8 /* TripController.swift */,
+			);
+			path = "Model Conrollers";
+			sourceTree = "<group>";
+		};
 		A3A3D1BF230E277B00AD7A99 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +108,8 @@
 		A3A3D1CA230E277B00AD7A99 /* Guidr */ = {
 			isa = PBXGroup;
 			children = (
+				95D89CD02311BA8800555FE8 /* Model Conrollers */,
+				953F8374230F94820081F527 /* Custom Views */,
 				A3A3D1E2230E28A100AD7A99 /* Models */,
 				A3A3D1E3230E28B000AD7A99 /* NetworkController */,
 				A3A3D1E1230E289600AD7A99 /* Storyboards */,
@@ -93,6 +127,9 @@
 				A3A3D1EE230E325800AD7A99 /* SignUpViewController.swift */,
 				A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */,
 				A3A3D1F0230E326B00AD7A99 /* HomePageTableViewController.swift */,
+				95D89CCA2311AD2300555FE8 /* PortfolioViewController.swift */,
+				95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */,
+				95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -100,6 +137,7 @@
 		A3A3D1E0230E285F00AD7A99 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				953F8371230F824F0081F527 /* Rokkitt */,
 				A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */,
 				A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */,
 				A3A3D1D4230E277D00AD7A99 /* LaunchScreen.storyboard */,
@@ -115,6 +153,9 @@
 				A3A3D1E8230E312100AD7A99 /* HomePage.storyboard */,
 				A3A3D1E6230E2C1600AD7A99 /* SignUp.storyboard */,
 				A3A3D1E4230E2B8C00AD7A99 /* Login.storyboard */,
+				95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */,
+				95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */,
+				95D89CC82311ACCE00555FE8 /* EditTrip.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -195,12 +236,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */,
 				A3A3D1E5230E2B8C00AD7A99 /* Login.storyboard in Resources */,
 				A3A3D1D6230E277D00AD7A99 /* LaunchScreen.storyboard in Resources */,
+				95D89CC92311ACCE00555FE8 /* EditTrip.storyboard in Resources */,
 				A3A3D1E9230E312100AD7A99 /* HomePage.storyboard in Resources */,
 				A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */,
 				A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */,
 				A3A3D1E7230E2C1600AD7A99 /* SignUp.storyboard in Resources */,
+				953F8372230F824F0081F527 /* Rokkitt in Resources */,
+				95D89CC72311ACB500555FE8 /* CreateTrip.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,12 +260,17 @@
 				A3A3D1F1230E326B00AD7A99 /* HomePageTableViewController.swift in Sources */,
 				A3A3D1F3230E3C2200AD7A99 /* Bearer.swift in Sources */,
 				A3A3D1EB230E324000AD7A99 /* LandingPageViewController.swift in Sources */,
+				953F8376230F94B00081F527 /* TripTableViewCell.swift in Sources */,
+				95D89CCF2311AD4100555FE8 /* EditTripViewController.swift in Sources */,
 				A3A3D1F7230E3D5800AD7A99 /* Guide.swift in Sources */,
 				A3A3D1EF230E325800AD7A99 /* SignUpViewController.swift in Sources */,
 				A3A3D1ED230E324D00AD7A99 /* LogInViewController.swift in Sources */,
 				A3899397230F988700A1FCE9 /* LandingPageNavViewController.swift in Sources */,
 				A3A3D1F9230E3FC900AD7A99 /* GuideController.swift in Sources */,
+				95D89CCB2311AD2300555FE8 /* PortfolioViewController.swift in Sources */,
 				A3A3D1F5230E3C2E00AD7A99 /* User.swift in Sources */,
+				95D89CD22311BAF500555FE8 /* TripController.swift in Sources */,
+				95D89CCD2311AD3400555FE8 /* CreateTripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Guidr/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Guidr/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
