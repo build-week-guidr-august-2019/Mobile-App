@@ -63,7 +63,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -87,7 +87,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -148,8 +148,8 @@
                         <viewLayoutGuide key="safeArea" id="bpD-jY-OaY"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="cqM-rl-4u4" id="dWd-S7-idl"/>
                         <outlet property="passwordTextField" destination="l1y-fT-7cu" id="FYK-mK-Boy"/>
+                        <outlet property="usernameTextField" destination="cqM-rl-4u4" id="WHk-8Y-Rat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXk-En-Ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
