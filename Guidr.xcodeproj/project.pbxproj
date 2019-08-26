@@ -16,6 +16,7 @@
 		95D89CCD2311AD3400555FE8 /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */; };
 		95D89CCF2311AD4100555FE8 /* EditTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */; };
 		95D89CD22311BAF500555FE8 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CD12311BAF500555FE8 /* TripController.swift */; };
+		A38993992314262000A1FCE9 /* LandingPageNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */; };
 		A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */; };
 		A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1CF230E277B00AD7A99 /* LandingPage.storyboard */; };
 		A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
 		95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripViewController.swift; sourceTree = "<group>"; };
 		95D89CD12311BAF500555FE8 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
+		A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageNavViewController.swift; sourceTree = "<group>"; };
 		A3A3D1C8230E277B00AD7A99 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A3D1D0230E277B00AD7A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandingPage.storyboard; sourceTree = "<group>"; };
@@ -122,7 +124,7 @@
 		A3A3D1DF230E285200AD7A99 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A3899396230F988700A1FCE9 /* LandingPageNavViewController.swift */,
+				A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */,
 				A3A3D1EA230E324000AD7A99 /* LandingPageViewController.swift */,
 				A3A3D1EE230E325800AD7A99 /* SignUpViewController.swift */,
 				A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */,
@@ -258,6 +260,7 @@
 			files = (
 				A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */,
 				A3A3D1F1230E326B00AD7A99 /* HomePageTableViewController.swift in Sources */,
+				A38993992314262000A1FCE9 /* LandingPageNavViewController.swift in Sources */,
 				A3A3D1F3230E3C2200AD7A99 /* Bearer.swift in Sources */,
 				A3A3D1EB230E324000AD7A99 /* LandingPageViewController.swift in Sources */,
 				953F8376230F94B00081F527 /* TripTableViewCell.swift in Sources */,
@@ -265,7 +268,6 @@
 				A3A3D1F7230E3D5800AD7A99 /* Guide.swift in Sources */,
 				A3A3D1EF230E325800AD7A99 /* SignUpViewController.swift in Sources */,
 				A3A3D1ED230E324D00AD7A99 /* LogInViewController.swift in Sources */,
-				A3899397230F988700A1FCE9 /* LandingPageNavViewController.swift in Sources */,
 				A3A3D1F9230E3FC900AD7A99 /* GuideController.swift in Sources */,
 				95D89CCB2311AD2300555FE8 /* PortfolioViewController.swift in Sources */,
 				A3A3D1F5230E3C2E00AD7A99 /* User.swift in Sources */,

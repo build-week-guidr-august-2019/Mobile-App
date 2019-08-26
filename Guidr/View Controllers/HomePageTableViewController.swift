@@ -81,7 +81,7 @@ class HomePageTableViewController: UITableViewController {
     }
     */
 
-    /*
+  
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -95,5 +95,5 @@ class HomePageTableViewController: UITableViewController {
      
   
 
-
+ 
 }

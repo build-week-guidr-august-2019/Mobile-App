@@ -15,7 +15,7 @@ class LandingPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assignbackground()
+//        assignbackground()
     }
     
 
@@ -31,7 +31,7 @@ class LandingPageViewController: UIViewController {
                 signupVC.guideController = guideController
             }
     }
-    */
+    
     
     func assignbackground() {
         let background = UIImage(named: "landingPageImage")
@@ -46,10 +46,7 @@ class LandingPageViewController: UIViewController {
         self.view.sendSubviewToBack(imageView)
     }
     
-    @IBAction func logInButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func signUpButtonPressed(_ sender: UIButton) {
-    }
-    
+  
+//
+}
 }
