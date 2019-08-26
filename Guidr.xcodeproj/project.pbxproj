@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		953F8371230F824F0081F527 /* Rokkitt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Rokkitt; path = ../../../../../Documents/ZIPS/Rokkitt; sourceTree = "<group>"; };
+		953F8371230F824F0081F527 /* Rokkitt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Rokkitt; path = ../../../../../Documents/ZIPS/Rokkitt; sourceTree = "<group>"; };
 		953F8375230F94B00081F527 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioView.storyboard; sourceTree = "<group>"; };
 		95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTrip.storyboard; sourceTree = "<group>"; };
@@ -415,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Guidr/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -432,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Guidr/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
