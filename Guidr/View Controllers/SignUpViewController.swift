@@ -47,7 +47,11 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func toLoginButtonPressed(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: "LogInModalSegue", sender: nil)
+//        self.navigationController?.popToRootViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
+        
+        //SEGUES need to be wired properly or this flow needs rethinking
     }
     /*
     // MARK: - Navigation
