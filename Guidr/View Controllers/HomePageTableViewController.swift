@@ -18,17 +18,18 @@ class HomePageTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // if user not logged in.
-        let userDefault = UserDefaults.standard
-        
-        let savedData = userDefault.bool(forKey: "isLoggedIn")
-        if(savedData){
-             performSegue(withIdentifier: "ToLanding", sender: nil)
+     
+        if guideController.bearer != nil {
+//        let userDefault = UserDefaults.standard
+//
+//        let savedData = userDefault.bool(forKey: "isLoggedIn")
+//        if(savedData){
+            tableView.reloadData()
             
-        }else{
-            
+        } else{
+            performSegue(withIdentifier: "ToLanding", sender: nil)
         }
-        
+         
     }
 
     // MARK: - Table view data source

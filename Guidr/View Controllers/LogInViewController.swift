@@ -45,16 +45,9 @@ class LogInViewController: UIViewController {
                     NSLog("Error occured during log in: \(error)")
                 } else {
                     DispatchQueue.main.async {
-//                        let alertController = UIAlertController(title: "Sign Up Successful", message: "Now please log in", preferredStyle: .alert)
-//                        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-//                            self.navigationController?.popViewController(animated: true)
-//                        })
-//
-//                        alertController.addAction(alertAction)
-//                        self.present(alertController, animated: true)
-                        let userDefault = UserDefaults.standard
-                        userDefault.set(true, forKey: "isLoggedIn")
-                        userDefault.synchronize()
+//                        let userDefault = UserDefaults.standard
+//                        userDefault.set(true, forKey: "isLoggedIn")
+//                        userDefault.synchronize()
                         self.dismiss(animated: true, completion: nil)
                     }
                 }
