@@ -14,15 +14,29 @@ class TripTableViewCell: UITableViewCell {
     @IBOutlet weak var shortDescriptionTextView: UITextView!
     @IBOutlet weak var tripImage: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    var trip: Trip? 
+//    {
+//        didSet {
+//            updateViews()
+//        }
+//    }
+//
+//    private func updateViews() {
+//        guard let trip = trip else { return }
+//
+//        titleLabel.text = trip.title
+//        shortDescriptionTextView.text = trip.shortDescription
+//        tripImage.image = URL(fileURLWithPath: "trip.image")
+//    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+//
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
 
 }

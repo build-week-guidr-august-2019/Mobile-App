@@ -9,22 +9,30 @@
 import UIKit
 
 class LandingPageViewController: UIViewController {
-
+    
+    
+    var guideController: GuideController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
     }
     
-
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "SignUp" {
+            if let signupVC = segue.destination as? SignUpViewController {
+                signupVC.guideController = guideController
+            }
+        } else if segue.identifier == "LogIn" {
+            guard let loginVC = segue.destination as? LogInViewController else {return}
+            loginVC.guideController = guideController
+        }
     }
-    */
     
     func assignbackground() {
         let background = UIImage(named: "landingPageImage")
@@ -38,11 +46,4 @@ class LandingPageViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
     }
-    
-    @IBAction func logInButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func signUpButtonPressed(_ sender: UIButton) {
-    }
-    
 }
