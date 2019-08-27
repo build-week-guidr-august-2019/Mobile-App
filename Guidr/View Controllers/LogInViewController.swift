@@ -58,6 +58,7 @@ class LogInViewController: UIViewController {
     
 
     @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
+//        performSegue(withIdentifier: "LogInModalSegue", sender: nil)
         self.navigationController?.popViewController(animated: true)
         //     // TO DO: how can we go from here to the sign up screen?
         //        self.dismiss(animated: true, completion: nil)
