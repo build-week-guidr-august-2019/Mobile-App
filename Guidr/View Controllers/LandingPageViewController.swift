@@ -9,17 +9,14 @@
 import UIKit
 
 class LandingPageViewController: UIViewController {
-
     
     var guideController: GuideController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        assignbackground()
+        assignbackground()
     }
     
-
-   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,8 +27,8 @@ class LandingPageViewController: UIViewController {
             if let signupVC = segue.destination as? SignUpViewController {
                 signupVC.guideController = guideController
             }
+        }
     }
-    
     
     func assignbackground() {
         let background = UIImage(named: "landingPageImage")
@@ -45,8 +42,4 @@ class LandingPageViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
     }
-    
-  
-//
-}
 }
