@@ -16,12 +16,9 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var difficultyTextField: UITextField!
-    @IBOutlet weak var guideAgeTextField: UITextField!
-    @IBOutlet weak var experienceTextField: UITextField!
     
     //var tripController: TripController?
     var trip: Trip?
-    var guide: Guide?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,9 +80,6 @@ class PortfolioViewController: UIViewController {
         dateTextField.text = "Date of Trip: \(String(describing: trip?.date))" // need formatting for the date
         durationTextField.text = "Duration of Trip: \(String(describing: trip?.duration)) day(s)"
         difficultyTextField.text = "Level of Difficulty: \(String(describing: trip?.type))"
-        guideAgeTextField.text = "Guide Age: \(String(describing: guide?.age))"
-        experienceTextField.text = "Years of Experience: \(String(describing: guide?.yearsAsGuide))"
-
     }
     /*
     // MARK: - Navigation
