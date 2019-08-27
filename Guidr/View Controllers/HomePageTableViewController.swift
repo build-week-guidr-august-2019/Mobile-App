@@ -11,6 +11,8 @@ import UIKit
 class HomePageTableViewController: UITableViewController {
 
     let guideController = GuideController()
+    //let tripController = TripController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -18,33 +20,38 @@ class HomePageTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-          performSegue(withIdentifier: "ToLanding", sender: nil)
+     
+        if guideController.bearer != nil {
+//        let userDefault = UserDefaults.standard
+//
+//        let savedData = userDefault.bool(forKey: "isLoggedIn")
+//        if(savedData){
+            tableView.reloadData()
+            
+        } else{
+            performSegue(withIdentifier: "ToLanding", sender: nil)
+        }
+         
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
 //    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
 //    }
     
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
+//        let trip = tripController.trips[indexPath.row]
+//        cell.trip = trip
+//        return cell
+//    }
 
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.

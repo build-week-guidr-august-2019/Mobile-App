@@ -28,6 +28,7 @@ class GuideController {
     var guide: [Guide] = []
     
     var bearer: Bearer?
+   
     private let baseURL = URL(string: "https://lambda-guidr.herokuapp.com/api")!
     
     
@@ -98,6 +99,7 @@ class GuideController {
             
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
+//                self.bearer.token = loggedIn
             } catch {
                 NSLog("error decoding bearer object: \(error)")
                 completion(.noDecode)
@@ -108,4 +110,6 @@ class GuideController {
         } .resume()
  
     }
+    
+   
 }

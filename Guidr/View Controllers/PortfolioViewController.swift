@@ -61,6 +61,21 @@ class PortfolioViewController: UIViewController {
     
     func updateViews() {
         
+//        guard let urlForImage = URL(string: String(describing: trip?.image)) else { return }
+//        let session = URLSession(configuration: .default)
+//        
+//        let getImageFromUrl = session.dataTask(with: urlForImage) { ( data, response, error )
+//            if let e = error {
+//                print("Some error occurred: \(e)")
+//            }
+//            
+//            if let imageData = data {
+//                let image = UIImage(data: imageData)
+//            } else {
+//                print("no image found")
+//            }
+//        }
+        
         // Need unwrapping for each item
         
         //tripImageView.image = UIImage(trip?.image)
