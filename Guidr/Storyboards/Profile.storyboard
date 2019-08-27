@@ -74,7 +74,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="htY-vB-hpc">
-                                <rect key="frame" x="40" y="128" width="334" height="403.5"/>
+                                <rect key="frame" x="40" y="128" width="334" height="412"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BoR-Ik-JwK">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="64.5"/>
@@ -100,7 +100,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UZD-Mw-M6V">
-                                        <rect key="frame" x="0.0" y="92.5" width="334" height="126"/>
+                                        <rect key="frame" x="0.0" y="92.5" width="334" height="134.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagline/Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBU-xg-bJp">
                                                 <rect key="frame" x="0.0" y="0.0" width="130.5" height="18.5"/>
@@ -109,8 +109,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-iu-fcH">
-                                                <rect key="frame" x="0.0" y="22.5" width="334" height="103.5"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="334" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="112" id="MC5-jt-jjo"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -122,7 +125,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="maj-Md-8og">
-                                        <rect key="frame" x="0.0" y="246.5" width="334" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="255" width="334" height="64.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guide Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1o-sl-oPr">
                                                 <rect key="frame" x="0.0" y="0.0" width="70.5" height="18.5"/>
@@ -145,7 +148,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mpL-G0-yfo">
-                                        <rect key="frame" x="0.0" y="339" width="334" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="347.5" width="334" height="64.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years of Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-XH-vcc">
                                                 <rect key="frame" x="0.0" y="0.0" width="134.5" height="18.5"/>
