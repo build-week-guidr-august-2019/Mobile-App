@@ -58,7 +58,6 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-iu-fcH">
                                                 <rect key="frame" x="0.0" y="22.333333333333321" width="295" height="103.66666666666669"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -118,7 +117,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="R6x-Kl-BkQ">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Tsc-aY-3iU"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Tsc-aY-3iU">
+                                            <connections>
+                                                <action selector="cancelPressed:" destination="e98-T8-hrK" id="q1T-Si-4O1"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -136,7 +139,11 @@
                         <viewLayoutGuide key="safeArea" id="mVJ-ie-Ugw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Sen-sh-Tg4">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="cLc-pH-0Xm"/>
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="cLc-pH-0Xm">
+                            <connections>
+                                <action selector="homeButtonPressed:" destination="e98-T8-hrK" id="set-vf-8Qd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="am5-mr-sGU">
                             <connections>
                                 <action selector="saveBarButtonPressed:" destination="e98-T8-hrK" id="QNZ-rw-QKk"/>
