@@ -17,18 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QDh-6B-vLP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QDh-6B-vLP" secondAttribute="bottom" id="8Xd-Pw-jR3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QDh-6B-vLP" secondAttribute="trailing" id="GPM-0d-XHd"/>
-                            <constraint firstItem="QDh-6B-vLP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="US1-ka-naI"/>
-                            <constraint firstItem="QDh-6B-vLP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hUK-zr-14n"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
