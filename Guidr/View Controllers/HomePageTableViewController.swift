@@ -15,7 +15,7 @@ class HomePageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,7 +38,7 @@ class HomePageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 0
     }
 
 //    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
