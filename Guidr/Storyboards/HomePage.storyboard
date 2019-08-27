@@ -80,6 +80,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="dt1-2I-Xi1">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="Gz9-Ol-Txb">
+                            <connections>
+                                <segue destination="dXD-1v-vAK" kind="presentation" identifier="ModalProfileSegue" id="wY8-GD-8Yy"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ii8-PP-aSz">
                             <connections>
                                 <action selector="addTripButtonPressed:" destination="tRL-8W-gId" id="eTT-Q2-liA"/>
@@ -101,7 +106,7 @@
                 <viewControllerPlaceholder storyboardName="LandingPage" id="JXu-z9-yJc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipP-bJ-XVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540" y="68"/>
+            <point key="canvasLocation" x="1625" y="182"/>
         </scene>
         <!--CreateTrip-->
         <scene sceneID="4mO-7U-im2">
@@ -118,6 +123,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFi-an-5Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1654" y="-89"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="sp2-zJ-pRl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="dXD-1v-vAK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YOI-Mz-zjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xu7-iT-teQ">

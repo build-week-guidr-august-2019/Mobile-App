@@ -10,6 +10,7 @@ import UIKit
 
 class LandingPageViewController: UIViewController {
     
+    
     var guideController: GuideController?
     
     override func viewDidLoad() {
@@ -18,7 +19,7 @@ class LandingPageViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -27,6 +28,9 @@ class LandingPageViewController: UIViewController {
             if let signupVC = segue.destination as? SignUpViewController {
                 signupVC.guideController = guideController
             }
+        } else if segue.identifier == "LogIn" {
+            guard let loginVC = segue.destination as? LogInViewController else {return}
+            loginVC.guideController = guideController
         }
     }
     

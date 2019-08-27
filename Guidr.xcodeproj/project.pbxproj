@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95226BE52314E1D3003D46B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226BE42314E1D3003D46B1 /* ProfileViewController.swift */; };
 		953F8372230F824F0081F527 /* Rokkitt in Resources */ = {isa = PBXBuildFile; fileRef = 953F8371230F824F0081F527 /* Rokkitt */; };
 		953F8376230F94B00081F527 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F8375230F94B00081F527 /* TripTableViewCell.swift */; };
 		95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */; };
@@ -17,6 +18,7 @@
 		95D89CCF2311AD4100555FE8 /* EditTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */; };
 		95D89CD22311BAF500555FE8 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CD12311BAF500555FE8 /* TripController.swift */; };
 		A38993992314262000A1FCE9 /* LandingPageNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */; };
+		A389939B2314D40300A1FCE9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A389939A2314D40300A1FCE9 /* Profile.storyboard */; };
 		A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */; };
 		A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1CF230E277B00AD7A99 /* LandingPage.storyboard */; };
 		A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */; };
@@ -35,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95226BE42314E1D3003D46B1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		953F8371230F824F0081F527 /* Rokkitt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Rokkitt; path = ../../../../../Documents/ZIPS/Rokkitt; sourceTree = "<group>"; };
 		953F8375230F94B00081F527 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioView.storyboard; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripViewController.swift; sourceTree = "<group>"; };
 		95D89CD12311BAF500555FE8 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
 		A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageNavViewController.swift; sourceTree = "<group>"; };
+		A389939A2314D40300A1FCE9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		A3A3D1C8230E277B00AD7A99 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A3D1D0230E277B00AD7A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandingPage.storyboard; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				95D89CCA2311AD2300555FE8 /* PortfolioViewController.swift */,
 				95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */,
 				95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */,
+				95226BE42314E1D3003D46B1 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			children = (
 				A3A3D1CF230E277B00AD7A99 /* LandingPage.storyboard */,
 				A3A3D1E8230E312100AD7A99 /* HomePage.storyboard */,
+				A389939A2314D40300A1FCE9 /* Profile.storyboard */,
 				A3A3D1E6230E2C1600AD7A99 /* SignUp.storyboard */,
 				A3A3D1E4230E2B8C00AD7A99 /* Login.storyboard */,
 				95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */,
@@ -239,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */,
+				A389939B2314D40300A1FCE9 /* Profile.storyboard in Resources */,
 				A3A3D1E5230E2B8C00AD7A99 /* Login.storyboard in Resources */,
 				A3A3D1D6230E277D00AD7A99 /* LaunchScreen.storyboard in Resources */,
 				95D89CC92311ACCE00555FE8 /* EditTrip.storyboard in Resources */,
@@ -264,6 +271,7 @@
 				A3A3D1F3230E3C2200AD7A99 /* Bearer.swift in Sources */,
 				A3A3D1EB230E324000AD7A99 /* LandingPageViewController.swift in Sources */,
 				953F8376230F94B00081F527 /* TripTableViewCell.swift in Sources */,
+				95226BE52314E1D3003D46B1 /* ProfileViewController.swift in Sources */,
 				95D89CCF2311AD4100555FE8 /* EditTripViewController.swift in Sources */,
 				A3A3D1F7230E3D5800AD7A99 /* Guide.swift in Sources */,
 				A3A3D1EF230E325800AD7A99 /* SignUpViewController.swift in Sources */,

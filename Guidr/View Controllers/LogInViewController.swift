@@ -13,6 +13,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var guideController: GuideController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +33,35 @@ class LogInViewController: UIViewController {
     */
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        guard let guideController = self.guideController else {return}
+        
+        if let username = self.usernameTextField.text,
+            !username.isEmpty,
+            let password = self.passwordTextField.text, !password.isEmpty {
+            let user = User(username: username, password: password)
+            
+            guideController.logIn(with: user) { (error) in
+                if let error = error {
+                    NSLog("Error occured during log in: \(error)")
+                } else {
+                    DispatchQueue.main.async {
+//                        let userDefault = UserDefaults.standard
+//                        userDefault.set(true, forKey: "isLoggedIn")
+//                        userDefault.synchronize()
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
     
+    
+
     @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
+//        performSegue(withIdentifier: "LogInModalSegue", sender: nil)
+        self.navigationController?.popViewController(animated: true)
+        //     // TO DO: how can we go from here to the sign up screen?
+        //        self.dismiss(animated: true, completion: nil)
     }
     
 
