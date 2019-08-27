@@ -9,7 +9,7 @@
 import Foundation
 
 struct Guide:  Codable {
-    let id: String
+    let id: Int 
     let name: String
     let age: Int
     let title: String

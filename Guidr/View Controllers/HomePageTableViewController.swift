@@ -9,9 +9,8 @@
 import UIKit
 
 class HomePageTableViewController: UITableViewController {
-    
-    let tripController = TripController()
-    
+
+    let guideController = GuideController()
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -82,26 +81,19 @@ class HomePageTableViewController: UITableViewController {
     }
     */
 
-    
+  
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowPortfolioViewSegue" {
-            
-            if let portfolioVC = segue.destination as? PortfolioViewController,
-            let indexPath = tableView.indexPathForSelectedRow {
-                
-                portfolioVC.trip = tripController.trips[indexPath.row]
-                
-                
-            }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "ToLanding" {
+            guard let landingVC = segue.destination as? LandingPageNavViewController else {return}
+            landingVC.guideController = guideController
         }
-//        else if segue.identifier == "ShowCreateTripSegue" {
-//            if let createTripVC = segue.destination as? CreateTripViewController {
-//
-//            }
-//        }
     }
+     
+  
 
-
+ 
 }
