@@ -112,17 +112,16 @@ class GuideController {
  
     }
     
-    func putUser(username: String, name: String, age: Int, title: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
+    func putUser(name: String, age: Int, title: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
         
-        //how to initialize this?
-        let newUser = User(username: username)
-        let newGuide = Guide(name: name, age: age, title: title, yearsAsGuide: yearsAsGuide)
-       
+        //how to initialize this
         
         guard let bearer = self.bearer else {
             completion(.noAuth)
             return
         }
+//        let newGuide = Guide(username: bearer.username, name: name, age: age, title: title, yearsAsGuide: yearsAsGuide)
+        let newGuide = Guide(username: bearer.username, id: bearer.id, name: name, age: age, title: title, tagline: nil, yearsAsGuide: yearsAsGuide)
         
         let putUserURL = baseURL.appendingPathComponent("auth/update")
         var request = URLRequest(url: putUserURL)
@@ -176,11 +175,12 @@ class GuideController {
     
     func createTrip(user_id: Int, title: String, type: Int, duration: Int, date: String, completion: @escaping (NetworkError?) -> ()) {
         
-        let newTrip = Trip(user_id: user_id, title: title, type: type, duration: duration, date: date)
         guard let bearer = self.bearer else {
             completion(.noAuth) //SLB
             return
         }
+        let newTrip = Trip(user_id: bearer.id, title: title, shortDescription: nil, isProfessional: nil, type: type, duration: duration, distance: nil, date: date)
+        
         let postTripURL = baseURL.appendingPathComponent("trip")
         var request = URLRequest(url: postTripURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -208,10 +208,10 @@ class GuideController {
                 completion(.otherError)
                 return
             }
-            guard let data = data else {
-                completion(.badData)
-                return
-            }
+//            guard let data = data else {
+//                completion(.badData)
+//                return
+//            }
             self.trip.append(newTrip)
             completion(nil)
             } .resume()

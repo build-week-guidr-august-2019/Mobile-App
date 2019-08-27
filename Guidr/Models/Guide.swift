@@ -9,6 +9,7 @@
 import Foundation
 
 struct Guide:  Codable{
+    let username: String
     var id: Int?
     let name: String
     let age: Int
@@ -16,7 +17,8 @@ struct Guide:  Codable{
     let tagline: String?
     let yearsAsGuide: Int
     
-    init(id: Int, name: String, age: Int, title: String, tagline: String, yearsAsGuide: Int) {
+    init(username: String, id: Int?, name: String, age: Int, title: String, tagline: String?, yearsAsGuide: Int) {
+        self.username = username
         self.id = id
         self.name = name
         self.age = age
@@ -60,7 +62,7 @@ struct Trip: Codable, Equatable {
     let date: String
 //    let image: URL
     
-    init(user_id: Int, title: String, shortDescription: String, isProfessional: Bool, type: Int, duration: Int, distance: Int, date: String) {
+    init( user_id: Int, title: String, shortDescription: String?, isProfessional: Bool?, type: Int, duration: Int, distance: Int?, date: String) {
         self.user_id = user_id
         self.title = title
         self.shortDescription = shortDescription
