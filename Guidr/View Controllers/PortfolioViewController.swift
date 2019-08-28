@@ -16,6 +16,7 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var difficultyTextField: UITextField!
+    @IBOutlet weak var tripTitleLabel: UILabel!
     
     //var tripController: TripController?
     var trip: Trip?
@@ -76,6 +77,7 @@ class PortfolioViewController: UIViewController {
         // Need unwrapping for each item
         
         //tripImageView.image = UIImage(trip?.image)
+        tripTitleLabel.text = trip?.title
         descriptionTextField.text = trip?.shortDescription
         dateTextField.text = "Date of Trip: \(String(describing: trip?.date))" // need formatting for the date
         durationTextField.text = "Duration of Trip: \(String(describing: trip?.duration)) day(s)"
