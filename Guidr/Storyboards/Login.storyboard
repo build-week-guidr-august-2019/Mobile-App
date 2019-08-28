@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bc2-SJ-2jU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bc2-SJ-2jU">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Guide!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMz-eE-fu8">
                                 <rect key="frame" x="92" y="94" width="230" height="52.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sql-bN-aH7">
@@ -36,7 +36,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="WUj-jm-ahe"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jR5-kY-MQr">
@@ -56,7 +56,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkj-dX-SBF">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-SF-pFt">
@@ -81,6 +81,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Hg3-EQ-6WA"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -95,6 +96,7 @@
                                         </state>
                                         <connections>
                                             <action selector="toSignUpButtonPressed:" destination="Bc2-SJ-2jU" eventType="touchUpInside" id="gKH-s1-FfQ"/>
+                                            <segue destination="qrA-eU-Xm3" kind="presentation" identifier="SignUpModalSegue" id="c5A-zG-DPI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -125,6 +127,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62Y-gk-hly" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-263.768115942029" y="121.875"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="bl8-I6-u3v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="qrA-eU-Xm3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfN-0O-Ume" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="93"/>
         </scene>
     </scenes>
 </document>

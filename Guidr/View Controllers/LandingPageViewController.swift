@@ -15,10 +15,8 @@ class LandingPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        assignbackground()
+        assignbackground()
     }
-    
-    
     
     // MARK: - Navigation
     
@@ -36,7 +34,6 @@ class LandingPageViewController: UIViewController {
         }
     }
     
-    
     func assignbackground() {
         let background = UIImage(named: "landingPageImage")
         
@@ -49,8 +46,4 @@ class LandingPageViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
     }
-    
-    
-    //
-
 }
