@@ -130,13 +130,13 @@
 			children = (
 				A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */,
 				A3A3D1EA230E324000AD7A99 /* LandingPageViewController.swift */,
+				A3A3D1F0230E326B00AD7A99 /* HomePageTableViewController.swift */,
+				95226BE42314E1D3003D46B1 /* ProfileViewController.swift */,
 				A3A3D1EE230E325800AD7A99 /* SignUpViewController.swift */,
 				A3A3D1EC230E324D00AD7A99 /* LogInViewController.swift */,
-				A3A3D1F0230E326B00AD7A99 /* HomePageTableViewController.swift */,
 				95D89CCA2311AD2300555FE8 /* PortfolioViewController.swift */,
 				95D89CCC2311AD3400555FE8 /* CreateTripViewController.swift */,
 				95D89CCE2311AD4100555FE8 /* EditTripViewController.swift */,
-				95226BE42314E1D3003D46B1 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

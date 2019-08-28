@@ -9,17 +9,82 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rokkitt-SemiBold.ttf">
+            <string>Rokkitt-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Edit Trip View Controller-->
         <scene sceneID="dPw-Xl-NNR">
             <objects>
-                <viewController id="wj8-kj-ZEe" customClass="EditTripViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wj8-kj-ZEe" customClass="EditTripViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u8T-vh-22S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRW-Zy-zMU">
+                                <rect key="frame" x="0.0" y="44" width="340" height="722"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pws-c9-vyk" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="500"/>
+                                        <color key="backgroundColor" red="0.81176470590000005" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="3Wb-NF-9iB"/>
+                                        </constraints>
+                                    </view>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-Eu-wMA">
+                                        <rect key="frame" x="0.0" y="456" width="340" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="barTintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <items>
+                                            <navigationItem id="c6f-vl-W2I"/>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pws-c9-vyk" firstAttribute="width" secondItem="VRW-Zy-zMU" secondAttribute="width" id="0GG-wl-5Bt"/>
+                                    <constraint firstItem="Pws-c9-vyk" firstAttribute="centerX" secondItem="VRW-Zy-zMU" secondAttribute="centerX" id="2Uo-Qa-UWF"/>
+                                    <constraint firstItem="Pws-c9-vyk" firstAttribute="leading" secondItem="VRW-Zy-zMU" secondAttribute="leading" id="734-eS-Aqk"/>
+                                    <constraint firstItem="Pws-c9-vyk" firstAttribute="top" secondItem="VRW-Zy-zMU" secondAttribute="top" id="Ge3-0s-UHX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pws-c9-vyk" secondAttribute="bottom" id="Irw-Cm-KGf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pws-c9-vyk" secondAttribute="trailing" id="zGO-2N-SN0"/>
+                                </constraints>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFh-ge-oay">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="3Ak-sC-7py">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="htI-o2-awN">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RtX-08-eCf">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beartrack Fork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoq-bR-wPl">
+                                <rect key="frame" x="107" y="12" width="126.5" height="23"/>
+                                <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yoq-bR-wPl" firstAttribute="centerX" secondItem="u8T-vh-22S" secondAttribute="centerX" id="9Ai-fv-0N9"/>
+                            <constraint firstItem="VRW-Zy-zMU" firstAttribute="top" secondItem="kT6-rK-vqz" secondAttribute="top" id="Aga-46-WDh"/>
+                            <constraint firstItem="kT6-rK-vqz" firstAttribute="trailing" secondItem="VRW-Zy-zMU" secondAttribute="trailing" id="Vy9-Ca-H7Q"/>
+                            <constraint firstItem="kT6-rK-vqz" firstAttribute="bottom" secondItem="VRW-Zy-zMU" secondAttribute="bottom" id="ZYw-JN-6ww"/>
+                            <constraint firstItem="VRW-Zy-zMU" firstAttribute="leading" secondItem="kT6-rK-vqz" secondAttribute="leading" id="x51-x7-8SK"/>
+                            <constraint firstItem="Yoq-bR-wPl" firstAttribute="top" secondItem="u8T-vh-22S" secondAttribute="top" constant="12" id="xt2-PJ-P06"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kT6-rK-vqz"/>
                     </view>
+                    <size key="freeformSize" width="340" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekQ-W2-XJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
