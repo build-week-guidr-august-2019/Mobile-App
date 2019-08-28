@@ -11,7 +11,13 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     var guideController: GuideController?
-    var guide: Guide?
+    var guide: Guide? {
+        didSet {
+            DispatchQueue.main.async {
+                self.updateViews()
+         }
+        }
+    }
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var taglineTextView: UITextView!
@@ -20,7 +26,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateViews() 
         // Do any additional setup after loading the view.
     }
     
@@ -39,6 +45,7 @@ class ProfileViewController: UIViewController {
                 NSLog("error creating new User: \(error)")}
         
             DispatchQueue.main.async {
+                 print("Guide created!")
                  self.dismiss(animated: true, completion: nil)
         }
     })
@@ -52,20 +59,25 @@ class ProfileViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func updateViews(){
+        guard let guide = guide else { return }
+                nameTextField.text = guide.name
+                taglineTextView.text = guide.tagline
+            
+                let yearsInt = guide.yearsAsGuide
+                let yearsString = String(yearsInt)
+                yearsTextField.text = yearsString
+                let ageInt = guide.age
+                let ageString = String(ageInt)
+                guideAgeTextField.text = ageString
+        
+    }
+    
     
     
    
 
-//func updateViews() {
-//    if gig != nil {
-//        guard let gig = gig else { return }
-//        jobTitleLabel.text = gig.title
-//        datePicker.date = gig.dueDate
-//        jobDescriptionField.text = gig.description
-//        navigationItem.title = gig.title
-//    } else {
-//        navigationItem.title = "New Gig"
-//    }
+
  
  
     /*
