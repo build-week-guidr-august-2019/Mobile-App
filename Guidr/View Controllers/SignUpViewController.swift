@@ -35,7 +35,8 @@ class SignUpViewController: UIViewController {
                     DispatchQueue.main.async {
                         let alertController = UIAlertController(title: "Sign Up Successful", message: "Now please log in", preferredStyle: .alert)
                         let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                            self.navigationController?.popViewController(animated: true)
+                            //self.navigationController?.popViewController(animated: true)
+                            self.performSegue(withIdentifier: "LogInModalSegue", sender: nil)
                         })
                         
                         alertController.addAction(alertAction)
@@ -47,9 +48,9 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func toLoginButtonPressed(_ sender: UIButton) {
-//        performSegue(withIdentifier: "LogInModalSegue", sender: nil)
-        self.navigationController?.popToRootViewController(animated: true)
-//        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "LogInModalSegue", sender: nil)
+        //self.navigationController?.popToRootViewController(animated: true)
+        //self.dismiss(animated: true, completion: nil)
         
         //SEGUES need to be wired properly or this flow needs rethinking
     }
