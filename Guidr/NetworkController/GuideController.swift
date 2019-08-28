@@ -112,7 +112,7 @@ class GuideController {
  
     }
     
-    func putUser(name: String, age: Int, title: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
+    func putUser(name: String, age: Int, tagline: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
         
         //how to initialize this
         
@@ -121,7 +121,7 @@ class GuideController {
             return
         }
 //        let newGuide = Guide(username: bearer.username, name: name, age: age, title: title, yearsAsGuide: yearsAsGuide)
-        let newGuide = Guide(username: bearer.username, id: bearer.id, name: name, age: age, title: title, tagline: nil, yearsAsGuide: yearsAsGuide)
+        let newGuide = Guide(username: bearer.username, id: bearer.id, name: name, age: age, title: nil, tagline: tagline, yearsAsGuide: yearsAsGuide)
         
         let putUserURL = baseURL.appendingPathComponent("auth/update")
         var request = URLRequest(url: putUserURL)

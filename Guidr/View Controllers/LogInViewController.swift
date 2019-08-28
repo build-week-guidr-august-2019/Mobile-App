@@ -49,6 +49,7 @@ class LogInViewController: UIViewController {
 //                        userDefault.set(true, forKey: "isLoggedIn")
 //                        userDefault.synchronize()
                         self.dismiss(animated: true, completion: nil)
+//                        self.navigationController?.popToRootViewController(animated: true )
                     }
                 }
             }
