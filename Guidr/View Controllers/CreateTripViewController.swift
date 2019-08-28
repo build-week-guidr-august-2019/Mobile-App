@@ -47,6 +47,7 @@ class CreateTripViewController: UIViewController {
     
     
     @IBAction func cancelTripButtonTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
