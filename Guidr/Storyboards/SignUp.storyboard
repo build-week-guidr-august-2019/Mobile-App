@@ -109,7 +109,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="signUpButtonPressed:" destination="fM8-4z-gpJ" eventType="touchUpInside" id="UFe-Cm-alG"/>
-                                                    <segue destination="Pm4-IT-FlU" kind="show" identifier="ShowLogInButtonSegue" id="aYC-IQ-hns"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0p-di-VIx">
@@ -120,7 +119,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="toLoginButtonPressed:" destination="fM8-4z-gpJ" eventType="touchUpInside" id="oFT-pP-j06"/>
-                                                    <segue destination="Pm4-IT-FlU" kind="show" id="6K2-BR-Bso"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -152,6 +150,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="l1y-fT-7cu" id="FYK-mK-Boy"/>
                         <outlet property="usernameTextField" destination="cqM-rl-4u4" id="WHk-8Y-Rat"/>
+                        <segue destination="Pm4-IT-FlU" kind="show" identifier="ShowLogInSegue" id="rea-Ot-glg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXk-En-Ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,7 +166,4 @@
             <point key="canvasLocation" x="530" y="168"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="aYC-IQ-hns"/>
-    </inferredMetricsTieBreakers>
 </document>
