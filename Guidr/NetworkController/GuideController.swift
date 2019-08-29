@@ -25,7 +25,7 @@ enum NetworkError: Error {
 }
 
 class GuideController {
-    var guide: [Guide] = []
+    var guide: Guide?
     var trip: [Trip]  = []
     
     var bearer: Bearer?
@@ -149,7 +149,7 @@ class GuideController {
                 return
             }
             
-            self.guide.append(newGuide)
+            self.guide = newGuide
             
             //Do I need to do decoder again for the new token?
             guard let data = data else {
@@ -227,7 +227,8 @@ class GuideController {
         
         var request = URLRequest(url: fetchURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
@@ -249,7 +250,7 @@ class GuideController {
             
             
             do {
-                self.guide = try decoder.decode([Guide].self, from: data)
+                self.guide = try decoder.decode(Guide.self, from: data)
                 completion(nil)
             } catch {
                 NSLog("Error decoding guide: \(error)")

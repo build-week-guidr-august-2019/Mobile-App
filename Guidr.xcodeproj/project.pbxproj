@@ -19,6 +19,7 @@
 		95D89CD22311BAF500555FE8 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D89CD12311BAF500555FE8 /* TripController.swift */; };
 		A38993992314262000A1FCE9 /* LandingPageNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */; };
 		A389939B2314D40300A1FCE9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A389939A2314D40300A1FCE9 /* Profile.storyboard */; };
+		A389939D23177B7200A1FCE9 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A389939C23177B7200A1FCE9 /* Trip.swift */; };
 		A3A3D1CC230E277B00AD7A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */; };
 		A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1CF230E277B00AD7A99 /* LandingPage.storyboard */; };
 		A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		95D89CD12311BAF500555FE8 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
 		A38993982314262000A1FCE9 /* LandingPageNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageNavViewController.swift; sourceTree = "<group>"; };
 		A389939A2314D40300A1FCE9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		A389939C23177B7200A1FCE9 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		A3A3D1C8230E277B00AD7A99 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A3D1D0230E277B00AD7A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandingPage.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				A3A3D1F6230E3D5800AD7A99 /* Guide.swift */,
 				A3A3D1F4230E3C2E00AD7A99 /* User.swift */,
 				A3A3D1F2230E3C2200AD7A99 /* Bearer.swift */,
+				A389939C23177B7200A1FCE9 /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				95D89CCB2311AD2300555FE8 /* PortfolioViewController.swift in Sources */,
 				A3A3D1F5230E3C2E00AD7A99 /* User.swift in Sources */,
 				95D89CD22311BAF500555FE8 /* TripController.swift in Sources */,
+				A389939D23177B7200A1FCE9 /* Trip.swift in Sources */,
 				95D89CCD2311AD3400555FE8 /* CreateTripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
