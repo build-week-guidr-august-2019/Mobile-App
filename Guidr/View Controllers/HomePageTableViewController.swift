@@ -100,6 +100,9 @@ class HomePageTableViewController: UITableViewController {
         } else if segue.identifier == "ModalProfileSegue" {
             guard let portfolioVC = segue.destination as? ProfileViewController else {return}
                 portfolioVC.guideController = guideController
+        } else if segue.identifier == "ShowCreateTripSegue" {
+            guard let createVC = segue.destination as? CreateTripViewController else {return}
+                createVC.guideController = guideController
         }
     }
      
