@@ -56,10 +56,15 @@ class LogInViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSignUpSegue" {
+            guard let signupVC = segue.destination as? SignUpViewController else { return }
+            signupVC.guideController = guideController
+        }
+    }
     
-
     @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "SignUpModalSegue", sender: nil)
+        performSegue(withIdentifier: "ShowSignUpSegue", sender: nil)
         //self.navigationController?.popViewController(animated: true)
         //     // TO DO: how can we go from here to the sign up screen?
                // I think we've corrected this and don't need the pop or dismiss
