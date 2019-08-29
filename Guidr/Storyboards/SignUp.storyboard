@@ -105,7 +105,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="20"/>
                                                 <state key="normal" title="Sign Up!">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="signUpButtonPressed:" destination="fM8-4z-gpJ" eventType="touchUpInside" id="UFe-Cm-alG"/>
