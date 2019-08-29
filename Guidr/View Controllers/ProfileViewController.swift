@@ -77,7 +77,7 @@ class ProfileViewController: UIViewController {
     }
     
     func loadGuide(){
-//        if guide != nil {
+        if guide != nil {
         guideController?.fetchGuide(completion: { ( error) in
             if error != nil {
                 NSLog("Error loading Guide: \(String(describing: error))")
@@ -86,7 +86,7 @@ class ProfileViewController: UIViewController {
                 self.updateViews()
             }
         })
-//    }
+    }
 }
     
     

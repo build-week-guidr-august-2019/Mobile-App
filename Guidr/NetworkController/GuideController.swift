@@ -220,7 +220,7 @@ class GuideController {
     func fetchGuide(completion: @escaping (NetworkError?) -> Void) {
         
         guard let bearer = self.bearer else {
-            completion(.noAuth) //SLB
+            completion(.noAuth)
             return
         }
         let fetchURL = baseURL.appendingPathComponent("user")
