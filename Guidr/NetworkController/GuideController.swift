@@ -185,7 +185,7 @@ class GuideController {
         var request = URLRequest(url: postTripURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
         
         
@@ -259,6 +259,47 @@ class GuideController {
             }
             } .resume()
     }
-    
+    func fetchAllTrips(completion: @escaping (NetworkError?) -> Void) {
+        
+        guard let bearer = self.bearer else {
+            completion(.noAuth)
+            return
+        }
+        let fetchURL = baseURL.appendingPathComponent("user/trips")
+        
+        var request = URLRequest(url: fetchURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.badAuth)
+                return
+            }
+            if let error = error {
+                NSLog("Error getting trips \(error)")
+                completion(.otherError)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned" )
+                completion(.badData)
+                return
+            }
+            let decoder = JSONDecoder()
+            
+            
+            do {
+                self.trip = try decoder.decode([Trip].self, from: data)
+                completion(nil)
+            } catch {
+                NSLog("Error decoding trips: \(error)")
+                completion(.noDecode)
+                return
+            }
+            } .resume()
+    }
     
 }
