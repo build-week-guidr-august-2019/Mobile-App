@@ -35,8 +35,8 @@ class SignUpViewController: UIViewController {
                     DispatchQueue.main.async {
                         let alertController = UIAlertController(title: "Sign Up Successful", message: "Now please log in", preferredStyle: .alert)
                         let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                            self.navigationController?.popViewController(animated: true)
-                            //self.performSegue(withIdentifier: "LogInModalSegue", sender: nil)
+                            //self.navigationController?.popViewController(animated: true)
+                            self.performSegue(withIdentifier: "ShowLogInSegue", sender: nil)
                         })
                         
                         alertController.addAction(alertAction)
@@ -47,8 +47,16 @@ class SignUpViewController: UIViewController {
        }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowLogInSegue" {
+            guard let loginVC = segue.destination as? LogInViewController else {return}
+            loginVC.guideController = guideController
+        }
+    }
+    
+    
     @IBAction func toLoginButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "LogInModalSegue", sender: nil)
+        performSegue(withIdentifier: "ShowLogInSegue", sender: nil)
         //self.navigationController?.popToRootViewController(animated: true)
         //self.dismiss(animated: true, completion: nil)
         

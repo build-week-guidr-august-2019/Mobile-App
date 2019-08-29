@@ -25,11 +25,11 @@ enum NetworkError: Error {
 }
 
 class GuideController {
-    var guide: [Guide] = []
+    var guide: Guide?
     var trip: [Trip]  = []
     
     var bearer: Bearer?
-   
+    
     private let baseURL = URL(string: "https://lambda-guidr.herokuapp.com/api")!
     
     
@@ -61,7 +61,7 @@ class GuideController {
                 return
             }
             completion(nil)
-        } .resume()
+            } .resume()
     }
     
     // log in
@@ -84,7 +84,7 @@ class GuideController {
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
-//                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                //                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
                 completion(.badAuth)
                 return
             }
@@ -100,7 +100,7 @@ class GuideController {
             
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
-//                self.bearer.token = loggedIn
+                //                self.bearer.token = loggedIn
             } catch {
                 NSLog("error decoding bearer object: \(error)")
                 completion(.noDecode)
@@ -108,11 +108,11 @@ class GuideController {
                 
             }
             completion(nil)
-        } .resume()
- 
+            } .resume()
+        
     }
     
-    func putUser(name: String, age: Int, title: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
+    func putUser(name: String, age: Int, tagline: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
         
         //how to initialize this
         
@@ -120,8 +120,8 @@ class GuideController {
             completion(.noAuth)
             return
         }
-//        let newGuide = Guide(username: bearer.username, name: name, age: age, title: title, yearsAsGuide: yearsAsGuide)
-        let newGuide = Guide(username: bearer.username, id: bearer.id, name: name, age: age, title: title, tagline: nil, yearsAsGuide: yearsAsGuide)
+        //        let newGuide = Guide(username: bearer.username, name: name, age: age, title: title, yearsAsGuide: yearsAsGuide)
+        let newGuide = Guide(username: bearer.username, id: bearer.id, name: name, age: age, title: nil, tagline: tagline, yearsAsGuide: yearsAsGuide)
         
         let putUserURL = baseURL.appendingPathComponent("auth/update")
         var request = URLRequest(url: putUserURL)
@@ -149,7 +149,7 @@ class GuideController {
                 return
             }
             
-            self.guide.append(newGuide)
+            self.guide = newGuide
             
             //Do I need to do decoder again for the new token?
             guard let data = data else {
@@ -159,7 +159,7 @@ class GuideController {
             let decoder = JSONDecoder()
             
             do {
-             
+                
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 
             } catch {
@@ -188,7 +188,7 @@ class GuideController {
         request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
         
         
-    
+        
         let jsonEncoder = JSONEncoder()
         do {
             let jsonData = try jsonEncoder.encode(newTrip)
@@ -208,13 +208,57 @@ class GuideController {
                 completion(.otherError)
                 return
             }
-//            guard let data = data else {
-//                completion(.badData)
-//                return
-//            }
+            //            guard let data = data else {
+            //                completion(.badData)
+            //                return
+            //            }
             self.trip.append(newTrip)
             completion(nil)
             } .resume()
     }
+    
+    func fetchGuide(completion: @escaping (NetworkError?) -> Void) {
         
+        guard let bearer = self.bearer else {
+            completion(.noAuth)
+            return
+        }
+        let fetchURL = baseURL.appendingPathComponent("user")
+        
+        var request = URLRequest(url: fetchURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.badAuth)
+                return
+            }
+            if let error = error {
+                NSLog("Error getting guide \(error)")
+                completion(.otherError)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned" )
+                completion(.badData)
+                return
+            }
+            let decoder = JSONDecoder()
+            
+            
+            do {
+                self.guide = try decoder.decode(Guide.self, from: data)
+                completion(nil)
+            } catch {
+                NSLog("Error decoding guide: \(error)")
+                completion(.noDecode)
+                return
+            }
+            } .resume()
+    }
+    
+    
 }

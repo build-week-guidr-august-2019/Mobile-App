@@ -52,12 +52,12 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pv-AD-D1n">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="17.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-rl-4u4">
                                                 <rect key="frame" x="0.0" y="21.333333333333343" width="335" height="60"/>
-                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="JBd-zx-NJz"/>
                                                 </constraints>
@@ -76,12 +76,12 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMx-wb-6xu">
                                                 <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="17.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1y-fT-7cu">
                                                 <rect key="frame" x="0.0" y="21.333333333333371" width="335" height="60"/>
-                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="jEs-K5-T8J"/>
                                                 </constraints>
@@ -99,13 +99,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfM-th-SEt">
                                                 <rect key="frame" x="40" y="0.0" width="255" height="45"/>
-                                                <color key="backgroundColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70196078429999997" green="0.6588235294" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="OBY-xl-QfO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="20"/>
                                                 <state key="normal" title="Sign Up!">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="signUpButtonPressed:" destination="fM8-4z-gpJ" eventType="touchUpInside" id="UFe-Cm-alG"/>
@@ -118,8 +118,7 @@
                                                     <color key="titleColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="toLoginButtonPressed:" destination="fM8-4z-gpJ" eventType="touchUpInside" id="oCi-bX-7Zw"/>
-                                                    <segue destination="Pm4-IT-FlU" kind="presentation" identifier="LogInModalSegue" id="wGe-Fz-FZH"/>
+                                                    <action selector="toLoginButtonPressed:" destination="fM8-4z-gpJ" eventType="touchUpInside" id="oFT-pP-j06"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -136,7 +135,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.81176470590000005" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.87058823529999996" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UjB-dt-qDC" firstAttribute="top" secondItem="EhX-yP-sAg" secondAttribute="bottom" constant="20" id="B3p-89-SLo"/>
                             <constraint firstItem="UjB-dt-qDC" firstAttribute="centerX" secondItem="ymf-PC-gK3" secondAttribute="centerX" id="CIs-Bg-ZxD"/>
@@ -151,6 +150,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="l1y-fT-7cu" id="FYK-mK-Boy"/>
                         <outlet property="usernameTextField" destination="cqM-rl-4u4" id="WHk-8Y-Rat"/>
+                        <segue destination="Pm4-IT-FlU" kind="show" identifier="ShowLogInSegue" id="rea-Ot-glg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXk-En-Ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
