@@ -4,18 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Rokkitt-Black.ttf</string>
-		<string>Rokkitt-Bold.ttf</string>
-		<string>Rokkitt-ExtraBold.ttf</string>
-		<string>Rokkitt-ExtraLight.ttf</string>
-		<string>Rokkitt-Light.ttf</string>
-		<string>Rokkitt-Medium.ttf</string>
-		<string>Rokkitt-Regular.ttf</string>
-		<string>Rokkitt-SemiBold.ttf</string>
-		<string>Rokkitt-Thin.ttf</string>
-	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -29,9 +17,21 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Rokkitt-Black.ttf</string>
+		<string>Rokkitt-Bold.ttf</string>
+		<string>Rokkitt-ExtraBold.ttf</string>
+		<string>Rokkitt-ExtraLight.ttf</string>
+		<string>Rokkitt-Light.ttf</string>
+		<string>Rokkitt-Medium.ttf</string>
+		<string>Rokkitt-Regular.ttf</string>
+		<string>Rokkitt-SemiBold.ttf</string>
+		<string>Rokkitt-Thin.ttf</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>HomePage</string>
 	<key>UIRequiredDeviceCapabilities</key>
