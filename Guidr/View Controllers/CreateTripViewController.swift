@@ -10,8 +10,14 @@ import UIKit
 
 class CreateTripViewController: UIViewController {
     
-    @IBOutlet weak var personalView: UIView!
-    @IBOutlet weak var professionalView: UIView!
+    @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var dateOfTripTextField: UITextField!
+    @IBOutlet weak var durationTextField: UITextField!
+    @IBOutlet weak var difficultyTextField: UITextField!
+    @IBOutlet weak var image: UIImageView!
+    
     
 
     override func viewDidLoad() {
@@ -29,22 +35,21 @@ class CreateTripViewController: UIViewController {
     }
     */
     
-    @IBAction func switchViews(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            personalView.alpha = 1
-            professionalView.alpha = 0
+    @IBAction func switchViews(_ sender: Any) {
+        if segment.selectedSegmentIndex == 0 {
+            
         } else {
-            personalView.alpha = 0
-            professionalView.alpha = 1
+            
         }
     }
     
     
     
-    @IBAction func saveTripButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction func uploadPhotoButtonPressed(_ sender: UIButton) {
     }
     
-    
+    @IBAction func saveTripButtonTapped(_ sender: UIBarButtonItem) {
+    }
     
     @IBAction func cancelTripButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)

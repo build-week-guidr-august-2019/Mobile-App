@@ -68,7 +68,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-21-ZZv">
-                                <rect key="frame" x="177" y="52" width="60.5" height="25.5"/>
+                                <rect key="frame" x="177" y="54" width="60.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                             <constraint firstItem="htY-vB-hpc" firstAttribute="leading" secondItem="mVJ-ie-Ugw" secondAttribute="leading" constant="40" id="XRk-Ki-ivs"/>
                             <constraint firstItem="JiM-5C-rrk" firstAttribute="trailing" secondItem="mVJ-ie-Ugw" secondAttribute="trailing" id="YEI-Vw-gfO"/>
                             <constraint firstItem="Wd6-21-ZZv" firstAttribute="centerX" secondItem="Ugk-FU-P7H" secondAttribute="centerX" id="c0Y-er-ISI"/>
-                            <constraint firstItem="Wd6-21-ZZv" firstAttribute="top" secondItem="mVJ-ie-Ugw" secondAttribute="top" constant="8" id="gpC-z2-8nz"/>
+                            <constraint firstItem="Wd6-21-ZZv" firstAttribute="top" secondItem="mVJ-ie-Ugw" secondAttribute="top" constant="10" id="gpC-z2-8nz"/>
                             <constraint firstItem="JiM-5C-rrk" firstAttribute="leading" secondItem="mVJ-ie-Ugw" secondAttribute="leading" id="hQY-PA-4UR"/>
                             <constraint firstItem="x0J-fl-zNW" firstAttribute="leading" secondItem="mVJ-ie-Ugw" secondAttribute="leading" id="jvZ-SE-p6V"/>
                             <constraint firstItem="mVJ-ie-Ugw" firstAttribute="bottom" secondItem="x0J-fl-zNW" secondAttribute="bottom" id="txY-WK-PtV"/>
