@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aEh-oD-8Xi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aEh-oD-8Xi">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rokkitt-Bold.ttf">
+            <string>Rokkitt-Bold</string>
+        </array>
+        <array key="Rokkitt-Regular.ttf">
+            <string>Rokkitt-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Landing Page View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -22,16 +30,16 @@
                                 <rect key="frame" x="65" y="178" width="284" height="594"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lot-LK-DKC" userLabel="Header Stack View">
-                                        <rect key="frame" x="24" y="60" width="236" height="108"/>
+                                        <rect key="frame" x="24" y="60.000000000000007" width="236" height="104.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guidr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-fl-MwZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="236" height="71.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="236" height="68.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Rokkitt-Bold" family="Rokkitt" pointSize="60"/>
                                                 <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organize. Document. Connect." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-AO-XF0">
-                                                <rect key="frame" x="0.0" y="87.666666666666686" width="236" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="84.333333333333314" width="236" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -39,18 +47,18 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="qvR-iy-Mk2">
-                                        <rect key="frame" x="42" y="213" width="200" height="155"/>
+                                        <rect key="frame" x="42" y="209.66666666666669" width="200" height="155"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bre-2a-XPK">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
-                                                <color key="backgroundColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70196078431372544" green="0.6588235294117647" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="LCh-ec-rTs"/>
                                                     <constraint firstAttribute="width" constant="200" id="V9j-nt-82N"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="19"/>
                                                 <state key="normal" title="Log In">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="dk4-qP-oD4" kind="show" identifier="LogIn" id="aME-7I-0RK"/>
@@ -58,13 +66,13 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ori-1L-Dgc">
                                                 <rect key="frame" x="0.0" y="95" width="200" height="60"/>
-                                                <color key="backgroundColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70196078431372544" green="0.6588235294117647" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="f5D-pV-PKv"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="19"/>
                                                 <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="1lb-kg-hfb" kind="show" identifier="SignUp" id="Zuh-72-JPv"/>
@@ -78,7 +86,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="131" id="HMj-19-dZD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="18"/>
                                         <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
