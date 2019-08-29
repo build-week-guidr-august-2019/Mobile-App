@@ -21,16 +21,14 @@ class LogInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowSignUpSegue" {
+            guard let signupVC = segue.destination as? SignUpViewController else { return }
+            signupVC.guideController = guideController
+        }
     }
-    */
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         guard let guideController = self.guideController else {return}
@@ -56,13 +54,6 @@ class LogInViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowSignUpSegue" {
-            guard let signupVC = segue.destination as? SignUpViewController else { return }
-            signupVC.guideController = guideController
-        }
-    }
-    
     @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "ShowSignUpSegue", sender: nil)
         //self.navigationController?.popViewController(animated: true)
@@ -71,5 +62,9 @@ class LogInViewController: UIViewController {
         //self.dismiss(animated: true, completion: nil)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
 
 }
