@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951735A623162F070012ABD6 /* Rokkitt in Resources */ = {isa = PBXBuildFile; fileRef = 951735A523162F070012ABD6 /* Rokkitt */; };
 		95226BE52314E1D3003D46B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226BE42314E1D3003D46B1 /* ProfileViewController.swift */; };
-		953F8372230F824F0081F527 /* Rokkitt in Resources */ = {isa = PBXBuildFile; fileRef = 953F8371230F824F0081F527 /* Rokkitt */; };
 		953F8376230F94B00081F527 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F8375230F94B00081F527 /* TripTableViewCell.swift */; };
 		95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */; };
 		95D89CC72311ACB500555FE8 /* CreateTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */; };
@@ -37,8 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951735A523162F070012ABD6 /* Rokkitt */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Rokkitt; sourceTree = "<group>"; };
 		95226BE42314E1D3003D46B1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		953F8371230F824F0081F527 /* Rokkitt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Rokkitt; path = ../../../../../Documents/ZIPS/Rokkitt; sourceTree = "<group>"; };
 		953F8375230F94B00081F527 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioView.storyboard; sourceTree = "<group>"; };
 		95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTrip.storyboard; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		A3A3D1E0230E285F00AD7A99 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				953F8371230F824F0081F527 /* Rokkitt */,
+				951735A523162F070012ABD6 /* Rokkitt */,
 				A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */,
 				A3A3D1D2230E277D00AD7A99 /* Assets.xcassets */,
 				A3A3D1D4230E277D00AD7A99 /* LaunchScreen.storyboard */,
@@ -247,13 +247,13 @@
 				95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */,
 				A389939B2314D40300A1FCE9 /* Profile.storyboard in Resources */,
 				A3A3D1E5230E2B8C00AD7A99 /* Login.storyboard in Resources */,
+				951735A623162F070012ABD6 /* Rokkitt in Resources */,
 				A3A3D1D6230E277D00AD7A99 /* LaunchScreen.storyboard in Resources */,
 				95D89CC92311ACCE00555FE8 /* EditTrip.storyboard in Resources */,
 				A3A3D1E9230E312100AD7A99 /* HomePage.storyboard in Resources */,
 				A3A3D1D3230E277D00AD7A99 /* Assets.xcassets in Resources */,
 				A3A3D1D1230E277B00AD7A99 /* LandingPage.storyboard in Resources */,
 				A3A3D1E7230E2C1600AD7A99 /* SignUp.storyboard in Resources */,
-				953F8372230F824F0081F527 /* Rokkitt in Resources */,
 				95D89CC72311ACB500555FE8 /* CreateTrip.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

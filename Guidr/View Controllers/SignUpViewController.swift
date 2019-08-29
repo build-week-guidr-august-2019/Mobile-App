@@ -35,8 +35,8 @@ class SignUpViewController: UIViewController {
                     DispatchQueue.main.async {
                         let alertController = UIAlertController(title: "Sign Up Successful", message: "Now please log in", preferredStyle: .alert)
                         let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                            //self.navigationController?.popViewController(animated: true)
-                            self.performSegue(withIdentifier: "LogInModalSegue", sender: nil)
+                            self.navigationController?.popViewController(animated: true)
+                            //self.performSegue(withIdentifier: "LogInModalSegue", sender: nil)
                         })
                         
                         alertController.addAction(alertAction)
