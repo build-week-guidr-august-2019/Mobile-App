@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     var guide: Guide? {
         didSet {
             DispatchQueue.main.async {
-                self.loadGuide()
+                self.updateViews()
          }
         }
     }
@@ -77,13 +77,16 @@ class ProfileViewController: UIViewController {
     }
     
     func loadGuide(){
-        if guide != nil {
+        if guide == nil {
         guideController?.fetchGuide(completion: { ( error) in
-            if error != nil {
-                NSLog("Error loading Guide: \(String(describing: error))")
+            if let error = error {
+                NSLog("Error loading Guide: \(error)")
+                return
             }
+            
             DispatchQueue.main.async {
-                self.updateViews()
+                self.guide = self.guideController?.guide 
+                
             }
         })
     }
