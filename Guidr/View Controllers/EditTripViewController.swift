@@ -10,13 +10,25 @@ import UIKit
 
 class EditTripViewController: UIViewController {
 
+    
+    @IBOutlet weak var tripTitleTextField: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var durationTextField: UITextField!
+    @IBOutlet weak var difficultyTextField: UILabel!
+    
+    @IBOutlet weak var tripImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func uploadPhotoButtonPressed(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
