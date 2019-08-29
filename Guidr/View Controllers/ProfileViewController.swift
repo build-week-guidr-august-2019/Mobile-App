@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateViews() 
+        loadGuide()
         // Do any additional setup after loading the view.
     }
     
@@ -60,6 +60,8 @@ class ProfileViewController: UIViewController {
     }
     
     func updateViews(){
+   
+            
         guard let guide = guide else { return }
                 nameTextField.text = guide.name
                 taglineTextView.text = guide.tagline
@@ -70,8 +72,22 @@ class ProfileViewController: UIViewController {
                 let ageInt = guide.age
                 let ageString = String(ageInt)
                 guideAgeTextField.text = ageString
+      
         
     }
+    
+    func loadGuide(){
+        if guide != nil {
+        guideController?.fetchGuide(completion: { ( error) in
+            if error != nil {
+                NSLog("Error loading Guide: \(String(describing: error))")
+            }
+            DispatchQueue.main.async {
+                self.updateViews()
+            }
+        })
+    }
+}
     
     
     
