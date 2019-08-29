@@ -97,6 +97,9 @@ class HomePageTableViewController: UITableViewController {
         if segue.identifier == "ToLanding" {
             guard let landingVC = segue.destination as? LandingPageNavViewController else {return}
             landingVC.guideController = guideController
+        } else if segue.identifier == "ModalProfileSegue" {
+            guard let portfolioVC = segue.destination as? ProfileViewController else {return}
+                portfolioVC.guideController = guideController
         }
     }
      

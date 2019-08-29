@@ -13,11 +13,11 @@ struct Guide:  Codable{
     var id: Int?
     let name: String
     let age: Int
-    let title: String
+    let title: String?
     let tagline: String?
     let yearsAsGuide: Int
     
-    init(username: String, id: Int?, name: String, age: Int, title: String, tagline: String?, yearsAsGuide: Int) {
+    init(username: String, id: Int?, name: String, age: Int, title: String?, tagline: String?, yearsAsGuide: Int) {
         self.username = username
         self.id = id
         self.name = name
