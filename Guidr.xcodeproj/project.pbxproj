@@ -10,8 +10,8 @@
 		951735A623162F070012ABD6 /* Rokkitt in Resources */ = {isa = PBXBuildFile; fileRef = 951735A523162F070012ABD6 /* Rokkitt */; };
 		95226BE52314E1D3003D46B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226BE42314E1D3003D46B1 /* ProfileViewController.swift */; };
 		95259BE023179E5200B30423 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95259BDF23179E5200B30423 /* AuthenticationServices.framework */; };
-		95259BE22317AC5F00B30423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95259BE12317AC5F00B30423 /* Assets.xcassets */; };
 		953F8376230F94B00081F527 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F8375230F94B00081F527 /* TripTableViewCell.swift */; };
+		95CC936C23180CBE00A6DD79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CC936B23180CBE00A6DD79 /* Assets.xcassets */; };
 		95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */; };
 		95D89CC72311ACB500555FE8 /* CreateTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */; };
 		95D89CC92311ACCE00555FE8 /* EditTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D89CC82311ACCE00555FE8 /* EditTrip.storyboard */; };
@@ -43,8 +43,8 @@
 		95226BE42314E1D3003D46B1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95259BDD23179E4D00B30423 /* Guidr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Guidr.entitlements; sourceTree = "<group>"; };
 		95259BDF23179E5200B30423 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
-		95259BE12317AC5F00B30423 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		953F8375230F94B00081F527 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		95CC936B23180CBE00A6DD79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95D89CC42311AC7D00555FE8 /* PortfolioView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioView.storyboard; sourceTree = "<group>"; };
 		95D89CC62311ACB500555FE8 /* CreateTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTrip.storyboard; sourceTree = "<group>"; };
 		95D89CC82311ACCE00555FE8 /* EditTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTrip.storyboard; sourceTree = "<group>"; };
@@ -162,9 +162,9 @@
 			children = (
 				951735A523162F070012ABD6 /* Rokkitt */,
 				A3A3D1CB230E277B00AD7A99 /* AppDelegate.swift */,
-				95259BE12317AC5F00B30423 /* Assets.xcassets */,
 				A3A3D1D4230E277D00AD7A99 /* LaunchScreen.storyboard */,
 				A3A3D1D7230E277D00AD7A99 /* Info.plist */,
+				95CC936B23180CBE00A6DD79 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			files = (
 				95D89CC52311AC7D00555FE8 /* PortfolioView.storyboard in Resources */,
 				A389939B2314D40300A1FCE9 /* Profile.storyboard in Resources */,
-				95259BE22317AC5F00B30423 /* Assets.xcassets in Resources */,
+				95CC936C23180CBE00A6DD79 /* Assets.xcassets in Resources */,
 				A3A3D1E5230E2B8C00AD7A99 /* Login.storyboard in Resources */,
 				951735A623162F070012ABD6 /* Rokkitt in Resources */,
 				A3A3D1D6230E277D00AD7A99 /* LaunchScreen.storyboard in Resources */,
