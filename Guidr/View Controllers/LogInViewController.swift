@@ -60,10 +60,10 @@ class LogInViewController: UIViewController {
 
     @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "SignUpModalSegue", sender: nil)
-        self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.popViewController(animated: true)
         //     // TO DO: how can we go from here to the sign up screen?
                // I think we've corrected this and don't need the pop or dismiss
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
     }
     
 
