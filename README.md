@@ -1,5 +1,5 @@
 # Mobile-App
-![guidrapp logo](https://github.com/usemytechstuff/Use-My-Tech-Stuff-iOS/blob/master/assets/rentechLogo4.png)
+![guidrapp logo](https://github.com/build-week-guidr-august-2019/Mobile-App/blob/master/GuidrApp_Logo_Tiny.jpg)
 
 ### What is Guidr?
 Instagram, but made specifically for logging and tracking your outdoor and mountainous excursions!
@@ -56,15 +56,25 @@ Instagram, but made specifically for logging and tracking your outdoor and mount
 1. Open in Xcode and run
 
 ### Other Components of This Project
-* [Landing Page A](https://github.com/usemytechstuff/Landing-Page-Bryant)
-* [Landing Page B](https://github.com/usemytechstuff/Landing-Page-Philip)
-* [Landing Page C](https://github.com/usemytechstuff/Landing-Page-Oluwatimileyin)
-* [Web Front End A](https://github.com/usemytechstuff/Use-My-Tech-Stuff-FE-Bazen)
-* [Web Front End B](https://github.com/usemytechstuff/Use-My-Tech-Stuff-FE-Sarah)
-* [Web Back End](https://github.com/usemytechstuff/Use-My-Tech-Stuff-BE)
-* [UX Design](https://projects.invisionapp.com/share/54S302QUYQJ)
-
-#### Team Members
+​
+- [iOS App](https://github.com/build-week-guidr-august-2019/Mobile-App)
+- [Marketing Page](https://github.com/build-week-guidr-august-2019/Marketing-Page)
+- [Frontend](https://github.com/build-week-guidr-august-2019/Front-End)
+- [UX](https://www.figma.com/file/nnl2C3EkGxGdUvvMjdv0BT/Guidr-Wireframes?node-id=17089%3A424)
+​
+### Team Members
+​
+|Role|Name / LinkedIn|Twitter|Github|
+|---|---|---|---|
+|iOS Unit 1 Dev|[Jessie Griffin](https://www.linkedin.com/in/jessie-ann-griffin/)||[ThreeDayStory](https://github.com/ThreeDayStory)|
+|iOS Unit 1 Dev|Ife Banire||[IfeBan](https://github.com/IfeBan)|
+|iOS Unit 2 Dev|[Stephanie Bowles](https://www.linkedin.com/in/stephanie-bowles-a5376261/)||[sbowl001](https://github.com/sbowl001)|
+|Web UI Dev|[Aleesha Wood](https://www.linkedin.com/in/aleesha-wood/)|[@aleeshamw](https://twitter.com/aleeshamw)|[SPECTRAT](https://github.com/SPECTRAT)|
+|Web UI Dev|Craig Paiva||[craiglpaiva](https://github.com/craiglpaiva)|
+|Frontend Dev|Zach Taylor||[zbtaylor](https://github.com/zbtaylor)|
+|Frontend Dev|Colby Howell||[colbyhowell](https://github.com/colbyhowell)|
+|UX Design|Taketa Joi Stewart||n/a|
+|Project Lead|[Michael Redig](https://www.linkedin.com/in/michael-redig/)|[@mredig](https://twitter.com/mredig)|[mredig](https://github.com/mredig)|
 * UX: Chariton Shumway - [@ShumwayChariton](https://twitter.com/ShumwayChariton)
 * iOS Dev: [Michael Redig (me)](https://github.com/mredig) - [@mredig](https://twitter.com/mredig)
 * Backend: Benson Lei
