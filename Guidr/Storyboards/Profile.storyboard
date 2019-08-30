@@ -31,17 +31,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="HGi-vt-xe2"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.81176470590000005" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="gaP-kt-XIb">
                                         <barButtonItem key="leftBarButtonItem" title="Home" id="T74-Uz-6Fp">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="homeButtonPressed:" destination="e98-T8-hrK" id="KmU-xd-O5T"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="jQo-0x-ij1">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="saveBarButtonPressed:" destination="e98-T8-hrK" id="lgG-KR-fqK"/>
                                             </connections>
@@ -55,11 +55,11 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="9Fh-gf-efQ"/>
                                     <constraint firstAttribute="height" constant="44" id="bXz-hc-0Ae"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.81176470590000005" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="R6x-Kl-BkQ">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Tsc-aY-3iU">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="cancelPressed:" destination="e98-T8-hrK" id="GDR-dw-t6h"/>
                                             </connections>
@@ -70,7 +70,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-21-ZZv">
                                 <rect key="frame" x="177" y="54" width="60.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="htY-vB-hpc">
@@ -87,6 +87,7 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmC-no-j1S">
                                                 <rect key="frame" x="0.0" y="20.5" width="334" height="44"/>
+                                                <color key="backgroundColor" red="0.99204939599999997" green="0.99221879239999999" blue="0.9920386672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="qtr-Y6-LRV"/>
                                                 </constraints>
@@ -110,7 +111,7 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-iu-fcH">
                                                 <rect key="frame" x="0.0" y="22.5" width="334" height="112"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="112" id="MC5-jt-jjo"/>
                                                 </constraints>
@@ -158,6 +159,7 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lxQ-NL-K2W">
                                                 <rect key="frame" x="0.0" y="20.5" width="334" height="44"/>
+                                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Axe-eH-0h1"/>
                                                 </constraints>
@@ -173,7 +175,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.81176470588235294" green="0.78823529411764703" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.87058823529999996" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mVJ-ie-Ugw" firstAttribute="trailing" secondItem="htY-vB-hpc" secondAttribute="trailing" constant="40" id="EgX-a2-LTd"/>
                             <constraint firstItem="x0J-fl-zNW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="htY-vB-hpc" secondAttribute="bottom" constant="8" id="Fei-YS-Iig"/>
