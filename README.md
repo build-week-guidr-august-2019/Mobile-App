@@ -57,14 +57,12 @@ Instagram, but made specifically for logging and tracking your outdoor and mount
 1. Open in Xcode and run
 
 ### Other Components of This Project
-​
 - [iOS App](https://github.com/build-week-guidr-august-2019/Mobile-App)
 - [Marketing Page](https://github.com/build-week-guidr-august-2019/Marketing-Page)
 - [Frontend](https://github.com/build-week-guidr-august-2019/Front-End)
 - [UX](https://www.figma.com/file/nnl2C3EkGxGdUvvMjdv0BT/Guidr-Wireframes?node-id=17089%3A424)
-​
+
 ### Team Members
-​
 - iOS Unit 1 Dev - [Jessie Griffin](https://www.linkedin.com/in/jessie-ann-griffin/) - [@JessieAGriffin](https://twitter.com/jessieagriffin) - [ThreeDayStory](https://github.com/ThreeDayStory)
 - iOS Unit 1 Dev - Ife Banire - [IfeBan](https://github.com/IfeBan)
 - iOS Unit 2 Dev - [Stephanie Bowles](https://www.linkedin.com/in/stephanie-bowles-a5376261/) - [sbowl001](https://github.com/sbowl001)
