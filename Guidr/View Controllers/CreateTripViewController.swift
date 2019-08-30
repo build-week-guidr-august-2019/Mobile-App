@@ -51,27 +51,11 @@ class CreateTripViewController: UIViewController {
     
     
     @IBAction func saveTripButtonTapped(_ sender: UIBarButtonItem) {
-//        guard let title = titleTextField.text,
-//            let description = descriptionTextField.text,
-//            let date = dateOfTripTextField.text,
-//            let duration: Int =  Int(durationTextField.text!) else { return }
-//    
-//        
-//        guideController?.createTrip(title: title, shortDescription: description, duration: duration, date: date, completion: { (_) in
-//            print("Message created!")
-//            DispatchQueue.main.async {
-//                self.navigationController?.popViewController(animated: true)
-//            }
-//        })
-        
-     
-    }
-    @IBAction func saveTrip(_ sender: Any) {
         guard let title = titleTextField.text,
             let description = descriptionTextField.text,
             let date = dateOfTripTextField.text,
             let duration: Int =  Int(durationTextField.text!) else { return }
-        
+    
         
         guideController?.createTrip(title: title, shortDescription: description, duration: duration, date: date, completion: { (_) in
             print("Message created!")
@@ -79,6 +63,22 @@ class CreateTripViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
         })
+        
+     
+    }
+    @IBAction func saveTrip(_ sender: Any) {
+//        guard let title = titleTextField.text,
+//            let description = descriptionTextField.text,
+//            let date = dateOfTripTextField.text,
+//            let duration: Int =  Int(durationTextField.text!) else { return }
+//        
+//        
+//        guideController?.createTrip(title: title, shortDescription: description, duration: duration, date: date, completion: { (_) in
+//            print("Message created!")
+//            DispatchQueue.main.async {
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//        })
     }
     
     @IBAction func cancelTripButtonTapped(_ sender: UIBarButtonItem) {
