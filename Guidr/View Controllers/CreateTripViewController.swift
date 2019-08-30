@@ -31,10 +31,10 @@ class CreateTripViewController: UIViewController {
 
     @IBOutlet weak var personalButton: UIButton!
     @IBOutlet weak var professionalButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        personalButton.isSelected = true
  
     }
     
@@ -53,6 +53,7 @@ class CreateTripViewController: UIViewController {
     
     
     @IBAction func saveTripButtonTapped(_ sender: UIBarButtonItem) {
+        
         guard let title = titleTextField.text,
             let description = descriptionTextField.text,
             let date = dateOfTripTextField.text,
@@ -84,7 +85,7 @@ class CreateTripViewController: UIViewController {
     }
     
     @IBAction func cancelTripButtonTapped(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func toggleTripType() {
