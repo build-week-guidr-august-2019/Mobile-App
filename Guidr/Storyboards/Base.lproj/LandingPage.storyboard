@@ -1,106 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aEh-oD-8Xi">
-    <device id="retina6_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aEh-oD-8Xi">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rokkitt-Bold.ttf">
+            <string>Rokkitt-Bold</string>
+        </array>
+        <array key="Rokkitt-Regular.ttf">
+            <string>Rokkitt-Regular</string>
+        </array>
+        <array key="Rokkitt-SemiBold.ttf">
+            <string>Rokkitt-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Landing Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LandingPageViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37U-vd-XMA" userLabel="Input View">
-                                <rect key="frame" x="65" y="178" width="284" height="594"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="37U-vd-XMA" userLabel="Input View">
+                                <rect key="frame" x="73" y="135" width="229" height="456"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lot-LK-DKC" userLabel="Header Stack View">
-                                        <rect key="frame" x="24" y="60" width="236" height="108"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OdQ-6h-FzI">
+                                        <rect key="frame" x="0.0" y="60" width="229" height="396"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guidr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-fl-MwZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="236" height="71.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                                <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organize. Document. Connect." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-AO-XF0">
-                                                <rect key="frame" x="0.0" y="87.666666666666686" width="236" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lot-LK-DKC" userLabel="Header Stack View">
+                                                <rect key="frame" x="20" y="0.0" width="189" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guidr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-fl-MwZ">
+                                                        <rect key="frame" x="21" y="0.0" width="147" height="53.5"/>
+                                                        <fontDescription key="fontDescription" name="Rokkitt-Bold" family="Rokkitt" pointSize="60"/>
+                                                        <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organize. Document. Connect." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-AO-XF0">
+                                                        <rect key="frame" x="0.0" y="53.5" width="189" height="18.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                        <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qvR-iy-Mk2">
+                                                <rect key="frame" x="30" y="102" width="169" height="144"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bre-2a-XPK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="169" height="62"/>
+                                                        <color key="backgroundColor" red="0.70196078431372544" green="0.6588235294117647" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="19"/>
+                                                        <state key="normal" title="Log In">
+                                                            <color key="titleColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="dk4-qP-oD4" kind="show" identifier="LogIn" id="aME-7I-0RK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ori-1L-Dgc">
+                                                        <rect key="frame" x="0.0" y="82" width="169" height="62"/>
+                                                        <color key="backgroundColor" red="0.70196078431372544" green="0.6588235294117647" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="19"/>
+                                                        <state key="normal" title="Sign Up">
+                                                            <color key="titleColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="1lb-kg-hfb" kind="show" identifier="SignUp" id="Zuh-72-JPv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="144" id="Y3y-wt-sBH"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of your                           personal and professional          tours." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53B-i6-Xdx">
+                                                <rect key="frame" x="0.0" y="276" width="229" height="120"/>
+                                                <color key="backgroundColor" red="0.70196078431372544" green="0.6588235294117647" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="Z5k-rM-fyn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rokkitt-Regular" family="Rokkitt" pointSize="18"/>
                                                 <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="qvR-iy-Mk2">
-                                        <rect key="frame" x="42" y="213" width="200" height="155"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bre-2a-XPK">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
-                                                <color key="backgroundColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="LCh-ec-rTs"/>
-                                                    <constraint firstAttribute="width" constant="200" id="V9j-nt-82N"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
-                                                <state key="normal" title="Log In">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="dk4-qP-oD4" kind="show" identifier="LogIn" id="aME-7I-0RK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ori-1L-Dgc">
-                                                <rect key="frame" x="0.0" y="95" width="200" height="60"/>
-                                                <color key="backgroundColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="f5D-pV-PKv"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
-                                                <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="1lb-kg-hfb" kind="show" identifier="SignUp" id="Zuh-72-JPv"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of your                           personal and professional          tours." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53B-i6-Xdx">
-                                        <rect key="frame" x="0.0" y="463" width="284" height="131"/>
-                                        <color key="backgroundColor" red="0.70196078431372544" green="0.6588235294117647" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="131" id="HMj-19-dZD"/>
+                                            <constraint firstItem="qvR-iy-Mk2" firstAttribute="leading" secondItem="OdQ-6h-FzI" secondAttribute="leading" constant="30" id="1xc-BC-gdz"/>
+                                            <constraint firstItem="lot-LK-DKC" firstAttribute="leading" secondItem="OdQ-6h-FzI" secondAttribute="leading" constant="20" id="50R-uP-dq1"/>
+                                            <constraint firstAttribute="trailing" secondItem="lot-LK-DKC" secondAttribute="trailing" constant="20" id="LxB-TM-nvc"/>
+                                            <constraint firstAttribute="trailing" secondItem="qvR-iy-Mk2" secondAttribute="trailing" constant="30" id="h4x-gT-BSX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.027450980392156862" green="0.20392156862745098" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="qvR-iy-Mk2" firstAttribute="top" secondItem="lot-LK-DKC" secondAttribute="bottom" constant="45" id="6E4-4V-pvn"/>
-                                    <constraint firstAttribute="bottom" secondItem="53B-i6-Xdx" secondAttribute="bottom" id="YLR-lB-48C"/>
-                                    <constraint firstItem="lot-LK-DKC" firstAttribute="top" secondItem="37U-vd-XMA" secondAttribute="top" constant="60" id="fKc-0I-lir"/>
-                                    <constraint firstItem="53B-i6-Xdx" firstAttribute="leading" secondItem="37U-vd-XMA" secondAttribute="leading" id="oTc-UP-TtI"/>
-                                    <constraint firstItem="53B-i6-Xdx" firstAttribute="centerX" secondItem="qvR-iy-Mk2" secondAttribute="centerX" id="tAd-hP-tUN"/>
-                                    <constraint firstItem="lot-LK-DKC" firstAttribute="centerX" secondItem="qvR-iy-Mk2" secondAttribute="centerX" id="vMh-un-byp"/>
+                                    <constraint firstAttribute="bottom" secondItem="OdQ-6h-FzI" secondAttribute="bottom" id="W16-b0-4I9"/>
+                                    <constraint firstItem="OdQ-6h-FzI" firstAttribute="top" secondItem="37U-vd-XMA" secondAttribute="top" constant="60" id="Y9R-0u-D1z"/>
+                                    <constraint firstAttribute="trailing" secondItem="OdQ-6h-FzI" secondAttribute="trailing" id="bQU-kD-SMF"/>
+                                    <constraint firstItem="OdQ-6h-FzI" firstAttribute="leading" secondItem="37U-vd-XMA" secondAttribute="leading" id="qxK-4F-00n"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lot-LK-DKC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HkS-JN-BQZ"/>
-                            <constraint firstItem="37U-vd-XMA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="Rr6-HA-6Xz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="37U-vd-XMA" secondAttribute="bottom" constant="90" id="YOW-gV-C10"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="37U-vd-XMA" secondAttribute="trailing" constant="65" id="YQm-Dx-HXJ"/>
-                            <constraint firstItem="37U-vd-XMA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="f3t-eo-uNz"/>
+                            <constraint firstItem="37U-vd-XMA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BXV-71-s0g"/>
+                            <constraint firstItem="37U-vd-XMA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="eJw-Vs-1Mn"/>
+                            <constraint firstItem="37U-vd-XMA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="eN1-RA-MYL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="37U-vd-XMA" secondAttribute="bottom" constant="76" id="r56-mg-Drg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -132,7 +147,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aEh-oD-8Xi" customClass="LandingPageNavViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pQj-dt-qHR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

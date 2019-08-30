@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class CreateTripViewController: UIViewController {
     
     @IBOutlet weak var segment: UISegmentedControl!
@@ -30,6 +32,7 @@ class CreateTripViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
  
@@ -42,9 +45,10 @@ class CreateTripViewController: UIViewController {
     }
     
     
-    
     @IBAction func uploadPhotoButtonPressed(_ sender: UIButton) {
     }
+    
+    
     
     @IBAction func saveTripButtonTapped(_ sender: UIBarButtonItem) {
 //        guard let title = titleTextField.text,
@@ -80,6 +84,7 @@ class CreateTripViewController: UIViewController {
     @IBAction func cancelTripButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
+
 }
+
+
