@@ -173,19 +173,19 @@ class GuideController {
         
     }
     
-    func createTrip(user_id: Int, title: String, type: Int, duration: Int, date: String, completion: @escaping (NetworkError?) -> ()) {
+    func createTrip(title: String, shortDescription: String, duration: Int, date: String, completion: @escaping (NetworkError?) -> ()) {
         
         guard let bearer = self.bearer else {
-            completion(.noAuth) //SLB
+            completion(.noAuth)  
             return
         }
-        let newTrip = Trip(user_id: bearer.id, title: title, shortDescription: nil, isProfessional: nil, type: type, duration: duration, distance: nil, date: date)
+        let newTrip = Trip(user_id: bearer.id, title: title, shortDescription: shortDescription, isProfessional: nil, type: 1, duration: duration, distance: nil, date: date)
         
         let postTripURL = baseURL.appendingPathComponent("trip")
         var request = URLRequest(url: postTripURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
         
         
@@ -259,6 +259,47 @@ class GuideController {
             }
             } .resume()
     }
-    
+    func fetchAllTrips(completion: @escaping (NetworkError?) -> Void) {
+        
+        guard let bearer = self.bearer else {
+            completion(.noAuth)
+            return
+        }
+        let fetchURL = baseURL.appendingPathComponent("user/trips")
+        
+        var request = URLRequest(url: fetchURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.badAuth)
+                return
+            }
+            if let error = error {
+                NSLog("Error getting trips \(error)")
+                completion(.otherError)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned" )
+                completion(.badData)
+                return
+            }
+            let decoder = JSONDecoder()
+            
+            
+            do {
+                self.trip = try decoder.decode([Trip].self, from: data)
+                completion(nil)
+            } catch {
+                NSLog("Error decoding trips: \(error)")
+                completion(.noDecode)
+                return
+            }
+            } .resume()
+    }
     
 }
