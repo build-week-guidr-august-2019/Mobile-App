@@ -35,12 +35,7 @@ class CreateTripViewController: UIViewController {
         super.viewDidLoad()
         
         personalButton.isSelected = true
-        
-        titleTextField.delegate = self
-        descriptionTextField.delegate = self
-        dateOfTripTextField.delegate = self
-        durationTextField.delegate = self
-        difficultyTextField.delegate = self
+ 
     }
     
     
