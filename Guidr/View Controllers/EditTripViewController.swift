@@ -39,4 +39,6 @@ class EditTripViewController: UIViewController {
     }
     */
 
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+    }
 }
