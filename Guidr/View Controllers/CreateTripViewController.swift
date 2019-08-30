@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol createTripDelegate {
-    func tripWasCreated(_ trip: Trip)
-}
+
 
 class CreateTripViewController: UIViewController {
     
@@ -78,23 +76,4 @@ class CreateTripViewController: UIViewController {
 
 }
 
-extension CreateTripViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text, !text.isEmpty {
-            switch textField {
-            case titleTextField:
-                descriptionTextField.becomeFirstResponder()
-            case descriptionTextField:
-                dateOfTripTextField.becomeFirstResponder()
-            case dateOfTripTextField:
-                durationTextField.becomeFirstResponder()
-            case durationTextField:
-                difficultyTextField.becomeFirstResponder()
-            default:
-                textField.resignFirstResponder()
-            }
-        }
-        return false
-    }
-}
+
