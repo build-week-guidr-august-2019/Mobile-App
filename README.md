@@ -25,9 +25,10 @@ Instagram, but made specifically for logging and tracking your outdoor and mount
 	* Add professional trips to be added to the user's resume for disbursement.
 	* Users can edit or delete a trip.
 	* Works on various versions of iPhone
+	* User can plan trips out in the future.
 * Technical Features
-	* Be able to Create, Read, Update and Delete rental data.
-		* Uses this [backend](https://github.com/usemytechstuff/Use-My-Tech-Stuff-BE)
+	* Be able to Create, View, Update and Delete data for trips taken and planned for the future.
+		* Uses this [backend](https://github.com/guidr-bw/guidr-BE)
 		* Creates items, create user account, and login with POST
 		* Reads items with GET
 			* options are *all items* and *single item*
@@ -64,26 +65,15 @@ Instagram, but made specifically for logging and tracking your outdoor and mount
 ​
 ### Team Members
 ​
-|Role|Name / LinkedIn|Twitter|Github|
-|---|---|---|---|
-|iOS Unit 1 Dev|[Jessie Griffin](https://www.linkedin.com/in/jessie-ann-griffin/)||[ThreeDayStory](https://github.com/ThreeDayStory)|
-|iOS Unit 1 Dev|Ife Banire||[IfeBan](https://github.com/IfeBan)|
-|iOS Unit 2 Dev|[Stephanie Bowles](https://www.linkedin.com/in/stephanie-bowles-a5376261/)||[sbowl001](https://github.com/sbowl001)|
-|Web UI Dev|[Aleesha Wood](https://www.linkedin.com/in/aleesha-wood/)|[@aleeshamw](https://twitter.com/aleeshamw)|[SPECTRAT](https://github.com/SPECTRAT)|
-|Web UI Dev|Craig Paiva||[craiglpaiva](https://github.com/craiglpaiva)|
-|Frontend Dev|Zach Taylor||[zbtaylor](https://github.com/zbtaylor)|
-|Frontend Dev|Colby Howell||[colbyhowell](https://github.com/colbyhowell)|
-|UX Design|Taketa Joi Stewart||n/a|
-|Project Lead|[Michael Redig](https://www.linkedin.com/in/michael-redig/)|[@mredig](https://twitter.com/mredig)|[mredig](https://github.com/mredig)|
-* UX: Chariton Shumway - [@ShumwayChariton](https://twitter.com/ShumwayChariton)
-* iOS Dev: [Michael Redig (me)](https://github.com/mredig) - [@mredig](https://twitter.com/mredig)
-* Backend: Benson Lei
-* Web UI: [Oluwatimileyin Ojo](https://github.com/openwell) - [@timileyinojo](https://twitter.com/timileyinojo)
-* Web UI: Bryant Patton
-* Web UI: [Philip Johnson](https://github.com/phil7j) - [@philjj](https://twitter.com/philjj)
-* Front End: Sarah Lee - [@sarahguamie](https://twitter.com/sarahguamie)
-* Front End: Bazen Berhane
-* Team Leader: [Scott Vojik](https://github.com/sk-vojik) [@scottvojik](https://twitter.com/scottvojik)
+- iOS Unit 1 Dev - [Jessie Griffin](https://www.linkedin.com/in/jessie-ann-griffin/) - [@JessieAGriffin](https://twitter.com/jessieagriffin) - [ThreeDayStory](https://github.com/ThreeDayStory)
+- iOS Unit 1 Dev - Ife Banire - [IfeBan](https://github.com/IfeBan)
+- iOS Unit 2 Dev - [Stephanie Bowles](https://www.linkedin.com/in/stephanie-bowles-a5376261/) - [sbowl001](https://github.com/sbowl001)
+- Web UI Dev - [Aleesha Wood](https://www.linkedin.com/in/aleesha-wood/) - [@aleeshamw](https://twitter.com/aleeshamw) - [SPECTRAT](https://github.com/SPECTRAT)
+- Web UI Dev - Craig Paiva - [craiglpaiva](https://github.com/craiglpaiva)
+- Frontend Dev - Zach Taylor - [zbtaylor](https://github.com/zbtaylor)
+- Frontend Dev - Colby Howell - [colbyhowell](https://github.com/colbyhowell)
+- UX Design - Taketa Joi Stewart
+- Project Lead - [Michael Redig](https://www.linkedin.com/in/michael-redig/) - [@mredig](https://twitter.com/mredig) - [mredig](https://github.com/mredig)
 
 #### Acknowledgements
 * Thanks to [Lambda](https://lambdaschool.com/) for being awesome, organizing this build week, and providing a fantastic education!
