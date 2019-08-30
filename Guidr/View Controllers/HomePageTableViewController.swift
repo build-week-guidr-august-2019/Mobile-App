@@ -26,8 +26,12 @@ class HomePageTableViewController: UITableViewController {
 //
 //        let savedData = userDefault.bool(forKey: "isLoggedIn")
 //        if(savedData){
-            tableView.reloadData()
-            
+            guideController.fetchAllTrips { (result) in
+                DispatchQueue.main.async {
+                    
+                    self.tableView.reloadData()
+                }
+            }
         } else{
             performSegue(withIdentifier: "ToLanding", sender: nil)
         }
@@ -38,19 +42,19 @@ class HomePageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return guideController.trip.count
     }
 
 //    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
 //    }
     
 
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
-//        let trip = tripController.trips[indexPath.row]
-//        cell.trip = trip
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
+       cell.titleLabel.text = guideController.trip[indexPath.row].title
+       cell.shortDescriptionTextView.text = guideController.trip[indexPath.row].shortDescription
+       return cell 
+    }
 
 
     /*
@@ -100,6 +104,14 @@ class HomePageTableViewController: UITableViewController {
         } else if segue.identifier == "ModalProfileSegue" {
             guard let portfolioVC = segue.destination as? ProfileViewController else {return}
                 portfolioVC.guideController = guideController
+        } else if segue.identifier == "ShowCreateTripSegue" {
+            guard let createVC = segue.destination as? CreateTripViewController else {return}
+                createVC.guideController = guideController
+        } else if segue.identifier == "ShowPortfolioSegue" {
+            guard let showVC = segue.destination as? PortfolioViewController else {return}
+            guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            showVC.trip = guideController.trip[indexPath.row]
+            showVC.guideController = guideController
         }
     }
      
