@@ -101,10 +101,10 @@ class GuideController {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 //USER DEFAULT
-                let userDefaults = UserDefaults.standard
-                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
+//                let userDefaults = UserDefaults.standard
+//                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
 
-//                let savedBearer = userDefaults.string(forKey: "Bearer") as? [String] ?? [String]()
+//    May need this later?            let savedBearer = userDefaults.string(forKey: "Bearer") as? [String] ?? [String]()
             } catch {
                 NSLog("error decoding bearer object: \(error)")
                 completion(.noDecode)
@@ -165,6 +165,9 @@ class GuideController {
             do {
                 
                 self.bearer = try decoder.decode(Bearer.self, from: data)
+                //USER DEFAULts again for update:
+//                let userDefaults = UserDefaults.standard
+//                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
                 
             } catch {
                 NSLog("error decoding bearer object: \(error)")
@@ -212,10 +215,7 @@ class GuideController {
                 completion(.otherError)
                 return
             }
-            //            guard let data = data else {
-            //                completion(.badData)
-            //                return
-            //            }
+        
             self.trip.append(newTrip)
             completion(nil)
             } .resume()

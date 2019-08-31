@@ -22,6 +22,7 @@ class HomePageTableViewController: UITableViewController {
         super.viewDidAppear(animated)
      
         if guideController.bearer != nil {
+            //can try to change to this when network is up:
 //        let userDefaults = UserDefaults.standard
 //
 //        let savedData = userDefaults.string(forKey: "Bearer")
