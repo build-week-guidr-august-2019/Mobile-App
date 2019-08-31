@@ -13,6 +13,7 @@ struct TripResults: Codable {
     let trips: [Trip]
 }
 struct Trip: Codable, Equatable {
+    var id: Int?
     var user_id: Int?
     let title: String
     let shortDescription: String?   //haven't added long description
@@ -23,7 +24,8 @@ struct Trip: Codable, Equatable {
     let date: String?
     //    let image: URL
     
-    init( user_id: Int?, title: String, shortDescription: String?, isProfessional: Bool?, type: Int?, duration: Int?, distance: Int?, date: String?) {
+    init( id: Int?, user_id: Int?, title: String, shortDescription: String?, isProfessional: Bool?, type: Int?, duration: Int?, distance: Int?, date: String?) {
+        self.id = id
         self.user_id = user_id
         self.title = title
         self.shortDescription = shortDescription

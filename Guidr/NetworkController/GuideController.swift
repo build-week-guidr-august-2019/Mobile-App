@@ -26,8 +26,8 @@ enum NetworkError: Error {
 
 class GuideController {
     var guide: Guide?
-    var trip: [Trip]  = []
-
+    var trips: [Trip]  = []
+    
     
     var bearer: Bearer?
     
@@ -102,10 +102,10 @@ class GuideController {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 //USER DEFAULT
-//                let userDefaults = UserDefaults.standard
-//                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
-
-//    May need this later?            let savedBearer = userDefaults.string(forKey: "Bearer") as? [String] ?? [String]()
+                //                let userDefaults = UserDefaults.standard
+                //                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
+                
+                //    May need this later?            let savedBearer = userDefaults.string(forKey: "Bearer") as? [String] ?? [String]()
             } catch {
                 NSLog("error decoding bearer object: \(error)")
                 completion(.noDecode)
@@ -119,13 +119,13 @@ class GuideController {
     
     func putUser(name: String, age: Int, tagline: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
         
-      
+        
         
         guard let bearer = self.bearer else {
             completion(.noAuth)
             return
         }
-       
+        
         let newGuide = Guide(username: bearer.username, id: bearer.id, name: name, age: age, title: nil, tagline: tagline, yearsAsGuide: yearsAsGuide)
         
         let putUserURL = baseURL.appendingPathComponent("auth/update")
@@ -166,9 +166,10 @@ class GuideController {
             do {
                 
                 self.bearer = try decoder.decode(Bearer.self, from: data)
-                //USER DEFAULts again for update:
+//                USER DEFAULts again for update:
+//                guard let bearer = self.bearer else {return}
 //                let userDefaults = UserDefaults.standard
-//                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
+//                userDefaults.set("\(bearer.token))", forKey: "Bearer")
                 
             } catch {
                 NSLog("error decoding bearer object: \(error)")
@@ -187,14 +188,13 @@ class GuideController {
             completion(.noAuth)  
             return
         }
-        let newTrip = Trip(user_id: bearer.id, title: title, shortDescription: shortDescription, isProfessional: nil, type: 1, duration: duration, distance: nil, date: date)
+        let newTrip = Trip(id: nil, user_id: bearer.id, title: title, shortDescription: shortDescription, isProfessional: nil, type: 1, duration: duration, distance: nil, date: date)
         
         let postTripURL = baseURL.appendingPathComponent("trip")
         var request = URLRequest(url: postTripURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
-        
         
         
         let jsonEncoder = JSONEncoder()
@@ -216,8 +216,25 @@ class GuideController {
                 completion(.otherError)
                 return
             }
-        
-            self.trip.append(newTrip)
+            
+            guard let data = data else {
+                completion(.badData)
+                return
+                
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let decodedTrip = try decoder.decode(Trip.self, from: data)
+                self.trips.append(decodedTrip)
+                
+            } catch {
+                NSLog("Error decoding single Trip: \(error)")
+                completion(.noDecode)
+                return
+            }
+            
+            
             completion(nil)
             } .resume()
     }
@@ -297,16 +314,129 @@ class GuideController {
             
             
             do {
-//                let container = try decoder.container(keyedBy: Trip.self)
-//                var tripsContainer = try container.nestedUnkeyedContainer(forKey: "trips")
+                
                 let tripResults = try decoder.decode(TripResults.self, from: data)
-                self.trip = tripResults.trips
+                self.trips = tripResults.trips
                 completion(nil)
             } catch {
                 NSLog("Error decoding trips: \(error)")
                 completion(.noDecode)
                 return
             }
+            } .resume()
+    }
+    
+    func putTrip(trip: Trip, title: String, shortDescription: String, duration: Int, date: String, completion: @escaping (NetworkError?) -> ()) {
+        
+        guard let bearer = self.bearer else {
+            completion(.noAuth)
+            return
+        }
+        guard let id = trip.id else {
+            print("Trip Id failed")
+            completion(.otherError)
+            return}
+        
+        let putTripURL = baseURL.appendingPathComponent("trip/\(id)")
+        let updatedTrip = Trip(id: id, user_id: bearer.id, title: title, shortDescription: shortDescription, isProfessional: nil, type: 1, duration: duration, distance: nil, date: date)
+  
+        
+        var request = URLRequest(url: putTripURL)
+        request.httpMethod = HTTPMethod.put.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        
+        
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(updatedTrip)
+            request.httpBody = jsonData
+        } catch {
+            NSLog("Error encoding user object: \(error)")
+            completion(.otherError)
+        }
+        
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.badAuth)
+                return
+            }
+            if let _ = error {
+                completion(.otherError)
+                return
+            }
+           
+            
+           let decoder = JSONDecoder()
+            guard let data = data else {
+                completion(.badData)
+                return}
+            do {
+                let decodedTrip = try decoder.decode(Trip.self, from: data)
+                guard let tripIndex = self.trips.firstIndex(of: trip) else {throw NetworkError.otherError}
+                self.trips[tripIndex] = decodedTrip
+            }  catch {
+                NSLog("Error updating trip: \(error)")
+                completion(.otherError)
+            }
+            
+            
+            completion(nil)
+            } .resume()
+    }
+    
+    func deleteTrip(trip: Trip, completion: @escaping (NetworkError?) -> ()) {
+        
+        guard let bearer = self.bearer else {
+            completion(.noAuth)
+            return
+        }
+     
+        guard let id = trip.id else {
+            print("Trip Id failed")
+            completion(.otherError)
+            return}
+        
+        let deleteTripURL = baseURL.appendingPathComponent("trip/\(id)")
+        var request = URLRequest(url: deleteTripURL)
+        request.httpMethod = HTTPMethod.delete.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
+
+
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.badAuth)
+                return
+            }
+            if let _ = error {
+                completion(.otherError)
+                return
+            }
+
+//            guard let data = data else {
+//                NSLog("No data returned" )
+//                completion(.badData)
+//                return
+//            }
+            
+//            let decoder = JSONDecoder()
+           
+            do {
+        
+                guard let tripIndex = self.trips.firstIndex(of: trip) else {throw NetworkError.otherError}
+                self.trips.remove(at: tripIndex)
+            }  catch {
+                NSLog("Error updating trip: \(error)")
+                completion(.otherError)
+            }
+            
+         
+
+            completion(nil)
             } .resume()
     }
     

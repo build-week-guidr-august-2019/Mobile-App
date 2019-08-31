@@ -46,7 +46,7 @@ class HomePageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return guideController.trip.count
+        return guideController.trips.count
     }
 
 //    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
@@ -55,8 +55,8 @@ class HomePageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
-       cell.titleLabel.text = guideController.trip[indexPath.row].title
-       cell.shortDescriptionTextView.text = guideController.trip[indexPath.row].shortDescription
+       cell.titleLabel.text = guideController.trips[indexPath.row].title
+       cell.shortDescriptionTextView.text = guideController.trips[indexPath.row].shortDescription
        return cell 
     }
 
@@ -114,7 +114,7 @@ class HomePageTableViewController: UITableViewController {
         } else if segue.identifier == "ShowPortfolioSegue" {
             guard let showVC = segue.destination as? PortfolioViewController else {return}
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
-            showVC.trip = guideController.trip[indexPath.row]
+            showVC.trip = guideController.trips[indexPath.row]
             showVC.guideController = guideController
         }
     }
