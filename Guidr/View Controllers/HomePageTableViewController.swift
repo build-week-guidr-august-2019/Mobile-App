@@ -22,10 +22,13 @@ class HomePageTableViewController: UITableViewController {
         super.viewDidAppear(animated)
      
         if guideController.bearer != nil {
-//        let userDefault = UserDefaults.standard
+//        let userDefaults = UserDefaults.standard
 //
-//        let savedData = userDefault.bool(forKey: "isLoggedIn")
+//        let savedData = userDefaults.string(forKey: "Bearer")
 //        if(savedData){
+        
+          
+            
             guideController.fetchAllTrips { (result) in
                 DispatchQueue.main.async {
                     

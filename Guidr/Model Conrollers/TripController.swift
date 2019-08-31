@@ -24,6 +24,8 @@ class TripController {
 //        return trips.filter { $0.isProfessional == true }
 //    }
 //
+ 
+   
 //    init() {
 ////        let userDefault = UserDefaults.standard.bool(forKey: tripListKey)
 ////        // if it's true it means the app has been run before

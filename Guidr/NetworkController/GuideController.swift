@@ -100,7 +100,11 @@ class GuideController {
             
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
-                //                self.bearer.token = loggedIn
+                //USER DEFAULT
+                let userDefaults = UserDefaults.standard
+                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
+
+//                let savedBearer = userDefaults.string(forKey: "Bearer") as? [String] ?? [String]()
             } catch {
                 NSLog("error decoding bearer object: \(error)")
                 completion(.noDecode)
@@ -114,13 +118,13 @@ class GuideController {
     
     func putUser(name: String, age: Int, tagline: String, yearsAsGuide: Int, completion: @escaping (NetworkError?) -> ()) {
         
-        //how to initialize this
+      
         
         guard let bearer = self.bearer else {
             completion(.noAuth)
             return
         }
-        //        let newGuide = Guide(username: bearer.username, name: name, age: age, title: title, yearsAsGuide: yearsAsGuide)
+       
         let newGuide = Guide(username: bearer.username, id: bearer.id, name: name, age: age, title: nil, tagline: tagline, yearsAsGuide: yearsAsGuide)
         
         let putUserURL = baseURL.appendingPathComponent("auth/update")
