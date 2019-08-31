@@ -13,9 +13,6 @@
         <array key="Rokkitt-Regular.ttf">
             <string>Rokkitt-Regular</string>
         </array>
-        <array key="Rokkitt-SemiBold.ttf">
-            <string>Rokkitt-SemiBold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Edit Trip View Controller-->
@@ -243,26 +240,6 @@
                                     <constraint firstAttribute="trailing" secondItem="Pws-c9-vyk" secondAttribute="trailing" id="zGO-2N-SN0"/>
                                 </constraints>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFh-ge-oay">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="44"/>
-                                <color key="barTintColor" red="0.70196078429999997" green="0.6588235294" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem id="3Ak-sC-7py">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="htI-o2-awN">
-                                            <color key="tintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RtX-08-eCf">
-                                            <color key="tintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beartrack Fork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoq-bR-wPl">
-                                <rect key="frame" x="107" y="12" width="126.5" height="23"/>
-                                <fontDescription key="fontDescription" name="Rokkitt-SemiBold" family="Rokkitt" pointSize="20"/>
-                                <color key="textColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-Eu-wMA">
                                 <rect key="frame" x="0.0" y="776" width="340" height="44"/>
                                 <constraints>
@@ -270,26 +247,28 @@
                                 </constraints>
                                 <color key="barTintColor" red="0.70196078431372544" green="0.6588235294117647" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem id="c6f-vl-W2I"/>
+                                    <navigationItem id="c6f-vl-W2I">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RtX-08-eCf">
+                                            <color key="tintColor" red="0.027450980390000001" green="0.20392156859999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="saveButtonPressed:" destination="wj8-kj-ZEe" id="ftY-S3-eDA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="eBh-Eu-wMA" secondAttribute="bottom" id="19e-PM-ewk"/>
-                            <constraint firstItem="Yoq-bR-wPl" firstAttribute="centerX" secondItem="u8T-vh-22S" secondAttribute="centerX" id="9Ai-fv-0N9"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="top" secondItem="kT6-rK-vqz" secondAttribute="top" id="Aga-46-WDh"/>
                             <constraint firstItem="eBh-Eu-wMA" firstAttribute="leading" secondItem="kT6-rK-vqz" secondAttribute="leading" id="H8S-YH-Jjq"/>
-                            <constraint firstItem="VRW-Zy-zMU" firstAttribute="leading" secondItem="LFh-ge-oay" secondAttribute="leading" id="POU-jM-vE2"/>
                             <constraint firstItem="eBh-Eu-wMA" firstAttribute="trailing" secondItem="kT6-rK-vqz" secondAttribute="trailing" id="Ppv-8E-5Ml"/>
                             <constraint firstItem="kT6-rK-vqz" firstAttribute="trailing" secondItem="VRW-Zy-zMU" secondAttribute="trailing" id="Vy9-Ca-H7Q"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="trailing" secondItem="eBh-Eu-wMA" secondAttribute="trailing" id="WSk-dh-tS3"/>
-                            <constraint firstItem="VRW-Zy-zMU" firstAttribute="top" secondItem="LFh-ge-oay" secondAttribute="bottom" id="XSF-zI-pbv"/>
                             <constraint firstItem="kT6-rK-vqz" firstAttribute="bottom" secondItem="VRW-Zy-zMU" secondAttribute="bottom" id="ZYw-JN-6ww"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="bottom" secondItem="kT6-rK-vqz" secondAttribute="bottom" id="do8-xR-912"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="leading" secondItem="kT6-rK-vqz" secondAttribute="leading" id="x51-x7-8SK"/>
-                            <constraint firstItem="Yoq-bR-wPl" firstAttribute="top" secondItem="u8T-vh-22S" secondAttribute="top" constant="12" id="xt2-PJ-P06"/>
-                            <constraint firstItem="VRW-Zy-zMU" firstAttribute="trailing" secondItem="LFh-ge-oay" secondAttribute="trailing" id="ySl-nN-tm5"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="leading" secondItem="eBh-Eu-wMA" secondAttribute="leading" id="z0l-3t-zfc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kT6-rK-vqz"/>

@@ -27,6 +27,7 @@ enum NetworkError: Error {
 class GuideController {
     var guide: Guide?
     var trip: [Trip]  = []
+
     
     var bearer: Bearer?
     
@@ -296,7 +297,10 @@ class GuideController {
             
             
             do {
-                self.trip = try decoder.decode([Trip].self, from: data)
+//                let container = try decoder.container(keyedBy: Trip.self)
+//                var tripsContainer = try container.nestedUnkeyedContainer(forKey: "trips")
+                let tripResults = try decoder.decode(TripResults.self, from: data)
+                self.trip = tripResults.trips
                 completion(nil)
             } catch {
                 NSLog("Error decoding trips: \(error)")

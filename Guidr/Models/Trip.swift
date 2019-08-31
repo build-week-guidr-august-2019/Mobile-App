@@ -8,18 +8,22 @@
 
 import Foundation
 
+
+struct TripResults: Codable {
+    let trips: [Trip]
+}
 struct Trip: Codable, Equatable {
     var user_id: Int?
     let title: String
     let shortDescription: String?   //haven't added long description
     let isProfessional: Bool?
-    let type: Int
-    let duration: Int
+    let type: Int?
+    let duration: Int?
     let distance: Int?
-    let date: String
+    let date: String?
     //    let image: URL
     
-    init( user_id: Int?, title: String, shortDescription: String?, isProfessional: Bool?, type: Int, duration: Int, distance: Int?, date: String) {
+    init( user_id: Int?, title: String, shortDescription: String?, isProfessional: Bool?, type: Int?, duration: Int?, distance: Int?, date: String?) {
         self.user_id = user_id
         self.title = title
         self.shortDescription = shortDescription
