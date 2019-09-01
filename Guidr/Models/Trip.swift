@@ -34,5 +34,6 @@ struct Trip: Codable, Equatable {
         self.duration = duration
         self.distance = distance
         self.date = date
+        
     }
 }

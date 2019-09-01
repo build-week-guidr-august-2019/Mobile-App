@@ -26,14 +26,16 @@ class PortfolioViewController: UIViewController {
             }
         }
     }
+    
     var guideController: GuideController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        updateViews()
+        //updateViews()
 
     }
+    
     func updateViews() {
         
         guard let trip = trip else {return }
@@ -79,11 +81,12 @@ class PortfolioViewController: UIViewController {
 //                }
 //            })
 //        }
-//
-//
 //    }
+    
     @IBAction func moreOptionsPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+        //guard let trip = trip else { return }
+        
         let alertController = UIAlertController(title: "More Options...", message: nil, preferredStyle: .alert)
         
         // Creates Options (actions) that will be shown in the alert
@@ -91,7 +94,14 @@ class PortfolioViewController: UIViewController {
                         handler: { action in self.performSegue(withIdentifier: "EditTripModalSegue", sender: self) })
         
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
-        
+//        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+//                                         self.guideController?.deleteTrip(trip: trip) { (error) in
+//                                            DispatchQueue.main.async {
+//                                                tableView.deleteRows(at: [indexPath], with: .fade)
+//                                                self.tableView.reloadData()
+//                                            }
+//            })}
+//
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         // Adds actions to the list of options
@@ -105,12 +115,9 @@ class PortfolioViewController: UIViewController {
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "EditTripModalSegue" {
 //            if let editTripVC = segue.destination as? EditTripViewController {
-//                //editTripVC.trip = trip
+//                editTripVC.trip = trip
+//                editTripVC.guideController = guideController
 //            }
 //        }
 //    }
-    
-
-  
-
 }

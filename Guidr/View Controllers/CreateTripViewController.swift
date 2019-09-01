@@ -38,8 +38,6 @@ class CreateTripViewController: UIViewController {
         
     }
     
-    
-    
     @IBAction func personalButtonPressed(_ sender: UIButton) {
         toggleTripType()
     }

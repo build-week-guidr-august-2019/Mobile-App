@@ -15,9 +15,12 @@ class EditTripViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
-    @IBOutlet weak var difficultyTextField: UILabel!
+    //@IBOutlet weak var difficultyTextField: UILabel!
     
     @IBOutlet weak var tripImageView: UIImageView!
+    
+    var guideController: GuideController?
+    var trip: Trip?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,5 +43,19 @@ class EditTripViewController: UIViewController {
     */
 
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+//        guard let title = tripTitleTextField.text,
+//            let description = descriptionTextView.text,
+//            let date = dateTextField.text,
+//            let duration: Int =  Int(durationTextField.text!) else { return }
+//
+//        //should this be putTrip instead of createTrip?
+//        guideController?.putTrip(trip: trip, title: title, shortDescription: description, duration: duration, date: date, completion:   )
+//        guideController?.createTrip(title: title, shortDescription: description, duration: duration, date: date, completion: { (_) in
+//            print("Message created!")
+//            DispatchQueue.main.async {
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//        })
     }
 }
