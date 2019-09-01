@@ -34,7 +34,7 @@ class HomePageTableViewController: UITableViewController {
                 }
             }
 //            }
-        } else{
+        } else {
             performSegue(withIdentifier: "ToLanding", sender: nil)
         }
        
@@ -70,15 +70,9 @@ class HomePageTableViewController: UITableViewController {
                      tableView.deleteRows(at: [indexPath], with: .fade)
                     self.tableView.reloadData()
                 }
-                
             }
-            }
-
+        }
     }
-
-
-    
-
   
     // MARK: - Navigation
 
