@@ -116,6 +116,7 @@ class PortfolioViewController: UIViewController {
 //        if segue.identifier == "EditTripModalSegue" {
 //            if let editTripVC = segue.destination as? EditTripViewController {
 //                editTripVC.trip = trip
+//                editTripVC.guideController = guideController
 //            }
 //        }
 //    }
