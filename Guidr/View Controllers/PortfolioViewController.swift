@@ -26,6 +26,7 @@ class PortfolioViewController: UIViewController {
             }
         }
     }
+    
     var guideController: GuideController?
     
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class PortfolioViewController: UIViewController {
         updateViews()
 
     }
+    
     func updateViews() {
         
         guard let trip = trip else {return }
@@ -84,13 +86,15 @@ class PortfolioViewController: UIViewController {
 //    }
     @IBAction func moreOptionsPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+        guard let trip = trip else { return }
         let alertController = UIAlertController(title: "More Options...", message: nil, preferredStyle: .alert)
         
         // Creates Options (actions) that will be shown in the alert
         let editAction = UIAlertAction(title: "Edit", style: .default,
                         handler: { action in self.performSegue(withIdentifier: "EditTripModalSegue", sender: self) })
         
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive,
+                                         handler: {action in self.guideController?.deleteTrip(trip: trip, completion: <#(NetworkError?) -> ()#>)})
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
