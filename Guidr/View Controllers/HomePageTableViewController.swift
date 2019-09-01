@@ -22,27 +22,29 @@ class HomePageTableViewController: UITableViewController {
         super.viewDidAppear(animated)
      
         if guideController.bearer != nil {
-//        let userDefault = UserDefaults.standard
 //
-//        let savedData = userDefault.bool(forKey: "isLoggedIn")
-//        if(savedData){
+//        let userDefaults = UserDefaults.standard
+//
+//        let savedData = userDefaults.string(forKey: "Bearer")
+////        guard let bearer = guideController.bearer else {return}
+//        if savedData != nil {
             guideController.fetchAllTrips { (result) in
                 DispatchQueue.main.async {
-                    
                     self.tableView.reloadData()
                 }
             }
+//            }
         } else{
             performSegue(withIdentifier: "ToLanding", sender: nil)
         }
-         
+       
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return guideController.trip.count
+        return guideController.trips.count
     }
 
 //    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
@@ -51,46 +53,31 @@ class HomePageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
-       cell.titleLabel.text = guideController.trip[indexPath.row].title
-       cell.shortDescriptionTextView.text = guideController.trip[indexPath.row].shortDescription
+       cell.titleLabel.text = guideController.trips[indexPath.row].title
+       cell.shortDescriptionTextView.text = guideController.trips[indexPath.row].shortDescription
        return cell 
     }
 
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+    
 
-    /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+            
+            guideController.deleteTrip(trip: guideController.trips[indexPath.row]) { (error) in
+                DispatchQueue.main.async {
+                     tableView.deleteRows(at: [indexPath], with: .fade)
+                    self.tableView.reloadData()
+                }
+                
+            }
+            }
 
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+
+    
 
   
     // MARK: - Navigation
@@ -110,7 +97,7 @@ class HomePageTableViewController: UITableViewController {
         } else if segue.identifier == "ShowPortfolioSegue" {
             guard let showVC = segue.destination as? PortfolioViewController else {return}
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
-            showVC.trip = guideController.trip[indexPath.row]
+            showVC.trip = guideController.trips[indexPath.row]
             showVC.guideController = guideController
         }
     }
