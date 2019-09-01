@@ -21,7 +21,7 @@ class CreateTripViewController: UIViewController {
     
     var guideController: GuideController?
     var trip: Trip?
-//    var trip: Trip? {
+
 //        didSet {
 //            DispatchQueue.main.async {
 //                self.updateViews()

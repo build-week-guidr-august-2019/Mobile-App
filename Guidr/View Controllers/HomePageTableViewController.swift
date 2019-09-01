@@ -22,24 +22,22 @@ class HomePageTableViewController: UITableViewController {
         super.viewDidAppear(animated)
      
         if guideController.bearer != nil {
-            //can try to change to this when network is up:
+//
 //        let userDefaults = UserDefaults.standard
 //
 //        let savedData = userDefaults.string(forKey: "Bearer")
-//        if(savedData){
-        
-          
-            
+////        guard let bearer = guideController.bearer else {return}
+//        if savedData != nil {
             guideController.fetchAllTrips { (result) in
                 DispatchQueue.main.async {
-                    
                     self.tableView.reloadData()
                 }
             }
+//            }
         } else{
             performSegue(withIdentifier: "ToLanding", sender: nil)
         }
-         
+       
     }
 
     // MARK: - Table view data source

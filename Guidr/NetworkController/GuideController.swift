@@ -102,8 +102,9 @@ class GuideController {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 //USER DEFAULT
-                //                let userDefaults = UserDefaults.standard
-                //                userDefaults.set("\(String(describing: self.bearer?.token))", forKey: "Bearer")
+//                guard let bearer = self.bearer else {return}
+//                let userDefaults = UserDefaults.standard
+//                userDefaults.set("\(bearer.token))", forKey: "Bearer")
                 
                 //    May need this later?            let savedBearer = userDefaults.string(forKey: "Bearer") as? [String] ?? [String]()
             } catch {
@@ -155,8 +156,7 @@ class GuideController {
             }
             
             self.guide = newGuide
-            
-            //Do I need to do decoder again for the new token?
+
             guard let data = data else {
                 completion(.badData)
                 return
@@ -320,6 +320,57 @@ class GuideController {
                 completion(nil)
             } catch {
                 NSLog("Error decoding trips: \(error)")
+                completion(.noDecode)
+                return
+            }
+            } .resume()
+    }
+    
+    func fetchSingleTrip(trip: Trip, completion: @escaping (NetworkError?) -> Void) {
+   
+        guard let bearer = self.bearer else {
+            completion(.noAuth)
+            return
+        }
+        guard let id = trip.id else {
+            print("Trip Id failed")
+            completion(.otherError)
+            return}
+        
+        let getTripURL = baseURL.appendingPathComponent("trip/\(id)")
+      
+        
+        var request = URLRequest(url: getTripURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.badAuth)
+                return
+            }
+            if let error = error {
+                NSLog("Error getting trip \(error)")
+                completion(.otherError)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned" )
+                completion(.badData)
+                return
+            }
+            let decoder = JSONDecoder()
+            
+            
+            do {
+                let decodedTrip = try decoder.decode(Trip.self, from: data)
+                guard let tripIndex = self.trips.firstIndex(of: trip) else {throw NetworkError.otherError}
+                self.trips[tripIndex] = decodedTrip
+                completion(nil)
+            } catch {
+                NSLog("Error decoding guide: \(error)")
                 completion(.noDecode)
                 return
             }
