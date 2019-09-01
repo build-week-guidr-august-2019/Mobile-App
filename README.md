@@ -28,8 +28,12 @@ Instagram, but made specifically for logging and tracking your outdoor and mount
 	* User can plan trips out in the future.
 * Technical Features
 	* Be able to Create, View, Update and Delete data for trips taken and planned for the future.
-		* Uses this [backend](https://github.com/guidr-bw/guidr-BE)
+	* Uses this [backend](https://github.com/guidr-bw/guidr-BE)
 		
+#### Install Instructions
+1. Clone this repository
+2. Open in Xcode and run
+
 ### Other Components of This Project
 - [iOS App](https://github.com/build-week-guidr-august-2019/Mobile-App)
 - [Marketing Page](https://github.com/build-week-guidr-august-2019/Marketing-Page)
@@ -48,3 +52,7 @@ Instagram, but made specifically for logging and tracking your outdoor and mount
 - Project Lead - [Michael Redig](https://www.linkedin.com/in/michael-redig/) - [@mredig](https://twitter.com/mredig) - [mredig](https://github.com/mredig)
 
 #### Acknowledgements
+* Thanks to:
+	* Thanks to [Lambda](https://lambdaschool.com/) for organizing this build week, and providing an amazing education!
+	* Our Team Leader Michael Redig for answering our many questions and always being there for us.
+	* All the team members for all their hard work and sleepless nights!
