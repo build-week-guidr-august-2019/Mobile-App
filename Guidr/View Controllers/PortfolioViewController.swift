@@ -19,7 +19,13 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var tripTitleLabel: UILabel!
     
     //var tripController: TripController?
-    var trip: Trip?
+    var trip: Trip? {
+        didSet {
+            DispatchQueue.main.async {
+                self.updateViews()
+            }
+        }
+    }
     var guideController: GuideController?
     
     override func viewDidLoad() {
@@ -28,8 +34,54 @@ class PortfolioViewController: UIViewController {
         updateViews()
 
     }
-    
+    func updateViews() {
+        
+        guard let trip = trip else {return }
+        tripTitleLabel.text = trip.title
+        descriptionTextField.text = trip.shortDescription
+        dateTextField.text =  "Date of Trip: \(String(describing: trip.date))" // need formatting for the date
 
+        durationTextField.text = "Duration of Trip: \(String(describing: trip.duration)) day(s)"
+//        difficultyTextField.text = "Level of Difficulty: \(String(describing: trip.type))"
+//
+        //        guard let urlForImage = URL(string: String(describing: trip?.image)) else { return }
+        //        let session = URLSession(configuration: .default)
+        //
+        //        let getImageFromUrl = session.dataTask(with: urlForImage) { ( data, response, error )
+        //            if let e = error {
+        //                print("Some error occurred: \(e)")
+        //            }
+        //
+        //            if let imageData = data {
+        //                let image = UIImage(data: imageData)
+        //            } else {
+        //                print("no image found")
+        //            }
+        //        }
+        
+        // Need unwrapping for each item
+        
+        //tripImageView.image = UIImage(trip?.image)
+       
+    }
+    
+//    func loadTrip(){
+//        if trip == nil {
+//            guideController?.fetchSingleTrip(trip: Trip, completion: { (error) in
+//                if let error = error {
+//                    NSLog("Error loading Trip: \(error)")
+//                    return
+//                }
+//
+//                DispatchQueue.main.async {
+//                    self.trip = self.guideController?.trips
+//
+//                }
+//            })
+//        }
+//
+//
+//    }
     @IBAction func moreOptionsPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
         let alertController = UIAlertController(title: "More Options...", message: nil, preferredStyle: .alert)
@@ -58,40 +110,7 @@ class PortfolioViewController: UIViewController {
 //        }
 //    }
     
-    func updateViews() {
-        
-//        guard let urlForImage = URL(string: String(describing: trip?.image)) else { return }
-//        let session = URLSession(configuration: .default)
-//        
-//        let getImageFromUrl = session.dataTask(with: urlForImage) { ( data, response, error )
-//            if let e = error {
-//                print("Some error occurred: \(e)")
-//            }
-//            
-//            if let imageData = data {
-//                let image = UIImage(data: imageData)
-//            } else {
-//                print("no image found")
-//            }
-//        }
-        
-        // Need unwrapping for each item
-        
-        //tripImageView.image = UIImage(trip?.image)
-        tripTitleLabel.text = trip?.title
-        descriptionTextField.text = trip?.shortDescription
-        dateTextField.text = "Date of Trip: \(String(describing: trip?.date))" // need formatting for the date
-        durationTextField.text = "Duration of Trip: \(String(describing: trip?.duration)) day(s)"
-        difficultyTextField.text = "Level of Difficulty: \(String(describing: trip?.type))"
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
