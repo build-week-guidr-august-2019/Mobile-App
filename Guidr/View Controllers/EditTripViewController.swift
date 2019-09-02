@@ -10,12 +10,12 @@ import UIKit
 
 class EditTripViewController: UIViewController {
 
-    
+    // MARK: Properties
     @IBOutlet weak var tripTitleTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
-    //@IBOutlet weak var difficultyTextField: UILabel!
+    @IBOutlet weak var difficultyTextField: UILabel!
     
     @IBOutlet weak var tripImageView: UIImageView!
     
@@ -24,38 +24,28 @@ class EditTripViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func uploadPhotoButtonPressed(_ sender: UIButton) {
     }
     
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
-//        guard let title = tripTitleTextField.text,
-//            let description = descriptionTextView.text,
-//            let date = dateTextField.text,
-//            let duration: Int =  Int(durationTextField.text!) else { return }
-//
-//        //should this be putTrip instead of createTrip?
-//        guideController?.putTrip(trip: trip, title: title, shortDescription: description, duration: duration, date: date, completion:   )
-//        guideController?.createTrip(title: title, shortDescription: description, duration: duration, date: date, completion: { (_) in
-//            print("Message created!")
-//            DispatchQueue.main.async {
-//                self.navigationController?.popViewController(animated: true)
-//            }
-//        })
+        guard let title = tripTitleTextField.text,
+            let description = descriptionTextView.text,
+            let date = dateTextField.text,
+            let duration: Int =  Int(durationTextField.text!),
+            let trip = trip else { return }
+
+        guideController?.putTrip(trip: trip, title: title, shortDescription: description, duration: duration, date: date, completion: { (error) in
+            if let error = error {
+                NSLog("error creating new User: \(error)")}
+            
+            DispatchQueue.main.async {
+                print("Guide created!")
+                self.dismiss(animated: true, completion: nil)
+            }
+        })
     }
 }

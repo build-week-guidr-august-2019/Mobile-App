@@ -31,17 +31,15 @@ class PortfolioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //updateViews()
-
     }
     
     func updateViews() {
-        
         guard let trip = trip else {return }
         tripTitleLabel.text = trip.title
         descriptionTextField.text = trip.shortDescription
-        dateTextField.text =  "Date of Trip: \(String(describing: trip.date))" // need formatting for the date
+        guard let date = trip.date else { return }
+        dateTextField.text =  "Date of Trip: " + date // need formatting for the date
 
         durationTextField.text = "Duration of Trip: \(String(describing: trip.duration)) day(s)"
 //        difficultyTextField.text = "Level of Difficulty: \(String(describing: trip.type))"
@@ -60,8 +58,6 @@ class PortfolioViewController: UIViewController {
         //                print("no image found")
         //            }
         //        }
-        
-        // Need unwrapping for each item
         
         //tripImageView.image = UIImage(trip?.image)
        
@@ -83,6 +79,7 @@ class PortfolioViewController: UIViewController {
 //        }
 //    }
     
+    // MARK: Navigation
     @IBAction func moreOptionsPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
         //guard let trip = trip else { return }

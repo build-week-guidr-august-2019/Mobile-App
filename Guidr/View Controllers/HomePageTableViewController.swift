@@ -42,25 +42,16 @@ class HomePageTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return guideController.trips.count
     }
-
-//    @IBAction func addTripButtonPressed(_ sender: UIBarButtonItem) {
-//    }
     
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
-       cell.titleLabel.text = guideController.trips[indexPath.row].title
-       cell.shortDescriptionTextView.text = guideController.trips[indexPath.row].shortDescription
-       return cell 
+        cell.titleLabel.text = guideController.trips[indexPath.row].title
+        cell.shortDescriptionTextView.text = guideController.trips[indexPath.row].shortDescription
+        return cell
     }
-
-
-    
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -76,10 +67,8 @@ class HomePageTableViewController: UITableViewController {
     }
   
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "ToLanding" {
             guard let landingVC = segue.destination as? LandingPageNavViewController else {return}
             landingVC.guideController = guideController
@@ -96,8 +85,4 @@ class HomePageTableViewController: UITableViewController {
             showVC.guideController = guideController
         }
     }
-     
-  
-
- 
 }

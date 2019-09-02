@@ -12,6 +12,7 @@ import UIKit
 
 class CreateTripViewController: UIViewController {
     
+    // MARK: Properties
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var dateOfTripTextField: UITextField!
@@ -21,7 +22,6 @@ class CreateTripViewController: UIViewController {
     
     var guideController: GuideController?
     var trip: Trip?
-
 //        didSet {
 //            DispatchQueue.main.async {
 //                self.updateViews()
@@ -32,12 +32,11 @@ class CreateTripViewController: UIViewController {
     @IBOutlet weak var personalButton: UIButton!
     @IBOutlet weak var professionalButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
+    // MARK: Navigation
     @IBAction func personalButtonPressed(_ sender: UIButton) {
         toggleTripType()
     }
@@ -49,7 +48,6 @@ class CreateTripViewController: UIViewController {
     @IBAction func uploadPhotoButtonPressed(_ sender: UIButton) {
     }
     
-    
     @IBAction func saveTripButtonTapped(_ sender: UIBarButtonItem) {
         
         guard let title = titleTextField.text,
@@ -57,16 +55,14 @@ class CreateTripViewController: UIViewController {
             let date = dateOfTripTextField.text,
             let duration: Int =  Int(durationTextField.text!) else { return }
     
-        
         guideController?.createTrip(title: title, shortDescription: description, duration: duration, date: date, completion: { (_) in
             print("Message created!")
             DispatchQueue.main.async {
                 self.navigationController?.popViewController(animated: true)
             }
         })
-        
-     
     }
+    
     @IBAction func saveTrip(_ sender: Any) {
 //        guard let title = titleTextField.text,
 //            let description = descriptionTextField.text,
@@ -90,7 +86,6 @@ class CreateTripViewController: UIViewController {
         personalButton.isSelected.toggle()
         professionalButton.isSelected.toggle()
     }
-
 }
 
 
