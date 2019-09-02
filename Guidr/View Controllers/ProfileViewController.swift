@@ -10,12 +10,13 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    // MARK: Properties
     var guideController: GuideController?
     var guide: Guide? {
         didSet {
             DispatchQueue.main.async {
                 self.updateViews()
-         }
+            }
         }
     }
     
@@ -27,11 +28,10 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadGuide()
-        // Do any additional setup after loading the view.
     }
     
     
-    
+    // MARK: Navigation
     @IBAction func saveBarButtonPressed(_ sender: UIBarButtonItem) {
 
         guard let name = nameTextField.text, !name.isEmpty,
@@ -47,8 +47,8 @@ class ProfileViewController: UIViewController {
             DispatchQueue.main.async {
                  print("Guide created!")
                  self.dismiss(animated: true, completion: nil)
-        }
-    })
+            }
+        })
     }
     
     @IBAction func homeButtonPressed(_ sender: UIBarButtonItem) {
@@ -59,21 +59,19 @@ class ProfileViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func updateViews(){
+    func updateViews() {
    
-            
         guard let guide = guide else { return }
-                nameTextField.text = guide.name
-                taglineTextView.text = guide.tagline
-            
-                let yearsInt = guide.yearsAsGuide
-                let yearsString = String(yearsInt)
-                yearsTextField.text = yearsString
-                let ageInt = guide.age
-                let ageString = String(ageInt)
-                guideAgeTextField.text = ageString
-      
         
+        nameTextField.text = guide.name
+        taglineTextView.text = guide.tagline
+    
+        let yearsInt = guide.yearsAsGuide
+        let yearsString = String(yearsInt)
+        yearsTextField.text = yearsString
+        let ageInt = guide.age
+        let ageString = String(ageInt)
+        guideAgeTextField.text = ageString
     }
     
     func loadGuide(){
@@ -96,20 +94,4 @@ class ProfileViewController: UIViewController {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
-    
-   
-
-
- 
- 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

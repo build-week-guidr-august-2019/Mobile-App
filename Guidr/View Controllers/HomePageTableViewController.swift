@@ -10,6 +10,7 @@ import UIKit
 
 class HomePageTableViewController: UITableViewController {
 
+    // MARK: Properties
     let guideController = GuideController()
     //let tripController = TripController()
     
