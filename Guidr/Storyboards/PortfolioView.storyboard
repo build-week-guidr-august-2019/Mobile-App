@@ -57,7 +57,7 @@
                                     <navigationItem id="M74-Pc-0mI"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Intermediate Level tour..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6CY-rf-0uX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Intermediate Level tour..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6CY-rf-0uX">
                                 <rect key="frame" x="40" y="320" width="334" height="80"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

@@ -258,22 +258,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRy-og-qEC">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="44"/>
-                                <color key="barTintColor" red="0.70196078429999997" green="0.6588235294" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="eBh-Eu-wMA" secondAttribute="bottom" id="19e-PM-ewk"/>
-                            <constraint firstAttribute="trailing" secondItem="CRy-og-qEC" secondAttribute="trailing" id="A8k-UA-ggi"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="top" secondItem="kT6-rK-vqz" secondAttribute="top" id="GsT-sE-WkX"/>
                             <constraint firstItem="eBh-Eu-wMA" firstAttribute="leading" secondItem="kT6-rK-vqz" secondAttribute="leading" id="H8S-YH-Jjq"/>
                             <constraint firstItem="eBh-Eu-wMA" firstAttribute="trailing" secondItem="kT6-rK-vqz" secondAttribute="trailing" id="Ppv-8E-5Ml"/>
                             <constraint firstItem="kT6-rK-vqz" firstAttribute="trailing" secondItem="VRW-Zy-zMU" secondAttribute="trailing" id="Vy9-Ca-H7Q"/>
-                            <constraint firstItem="CRy-og-qEC" firstAttribute="leading" secondItem="u8T-vh-22S" secondAttribute="leading" id="bV4-xp-7nU"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="bottom" secondItem="u8T-vh-22S" secondAttribute="bottom" id="do8-xR-912"/>
-                            <constraint firstItem="CRy-og-qEC" firstAttribute="top" secondItem="u8T-vh-22S" secondAttribute="top" id="fQa-40-1t5"/>
                             <constraint firstItem="VRW-Zy-zMU" firstAttribute="leading" secondItem="kT6-rK-vqz" secondAttribute="leading" id="x51-x7-8SK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kT6-rK-vqz"/>
