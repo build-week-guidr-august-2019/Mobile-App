@@ -10,6 +10,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
+    // MARK: Properties
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -17,12 +18,9 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowSignUpSegue" {
             guard let signupVC = segue.destination as? SignUpViewController else { return }
@@ -56,15 +54,10 @@ class LogInViewController: UIViewController {
     
     @IBAction func toSignUpButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "ShowSignUpSegue", sender: nil)
-        //self.navigationController?.popViewController(animated: true)
-        //     // TO DO: how can we go from here to the sign up screen?
-               // I think we've corrected this and don't need the pop or dismiss
-        //self.dismiss(animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
-
 }
