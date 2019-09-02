@@ -10,11 +10,11 @@ import Foundation
 
 
 struct Bearer: Codable {
-    let token: String
+    var token: String
     let id: Int
     let username: String
     
-   
+
 }
 
 

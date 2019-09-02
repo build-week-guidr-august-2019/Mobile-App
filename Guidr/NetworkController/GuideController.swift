@@ -29,7 +29,16 @@ class GuideController {
     var trips: [Trip]  = []
     
     
-    var bearer: Bearer?
+    var bearer: Bearer? {
+        didSet{
+            guard let bearer = bearer else {return}
+            UserDefaults.standard.set("\(bearer.token)", forKey: "Bearer")
+            print("token set")
+            
+//            return UserDefaults.standard.string(forKey: "Bearer") ?? ""
+        
+        }
+    }
     
     private let baseURL = URL(string: "https://lambda-guidr.herokuapp.com/api")!
     

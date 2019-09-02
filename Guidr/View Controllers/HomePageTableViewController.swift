@@ -21,13 +21,15 @@ class HomePageTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
      
-        if guideController.bearer != nil {
-//
-//        let userDefaults = UserDefaults.standard
-//
-//        let savedData = userDefaults.string(forKey: "Bearer")
-////        guard let bearer = guideController.bearer else {return}
-//        if savedData != nil {
+//        if guideController.bearer != nil {
+
+        let userDefaults = UserDefaults.standard
+
+        let savedToken = userDefaults.string(forKey: "Bearer")
+//        guard let bearer = guideController.bearer else {return}
+       
+        if savedToken != nil {
+//            guideController.bearer!.token = savedToken!
             guideController.fetchAllTrips { (result) in
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
